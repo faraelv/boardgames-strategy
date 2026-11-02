@@ -3,6 +3,7 @@
   "short_name": "Jugada Maestra",
   "description": "Las mejores estrategias para ganar en vuestros juegos de mesa.",
   "lang": "es",
+  "id": "/boardgames-strategy/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
