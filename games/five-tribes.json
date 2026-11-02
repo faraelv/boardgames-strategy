@@ -1,0 +1,33 @@
+{
+  "id": "fiveTribes",
+  "name": "Five Tribes",
+  "plans": [
+    {
+      "id": "general",
+      "title": "Consejos sueltos",
+      "kind": "General",
+      "thesis": "Hazte con losetas vaciándolas al recoger peones y guarda los Asesinos para lo que no puedas resolver de otra forma.",
+      "keys": [
+        {
+          "title": "Control de losetas",
+          "when": "Cualquier turno",
+          "text": "La forma más barata de quedarte una loseta es terminar el recorrido y dejarla vacía al recoger los peones. No necesitas gastar Asesinos para eso."
+        },
+        {
+          "title": "Asesinos rojos",
+          "when": "Cuando el estorbo no es tuyo",
+          "text": "Rinden más quitando peones que no podrías recoger (otro color) o un peón valioso de un rival a distancia. Si la loseta está casi vacía y el asesinato la remata, adelante: es la vía más rápida."
+        },
+        {
+          "title": "Anun-Nak",
+          "when": "Antes de mover",
+          "text": "Úsalo antes del movimiento para crear una loseta de salida o desbloquear jugadas que no existían. Elige la loseta vacía antes de sacar los 3 peones de la bolsa."
+        }
+      ],
+      "sources": [
+        { "title": "Reglamento de Five Tribes" },
+        { "title": "Aclaración de Bruno Cathala sobre Anun-Nak" }
+      ]
+    }
+  ]
+}

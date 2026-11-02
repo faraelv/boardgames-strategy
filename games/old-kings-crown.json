@@ -1,0 +1,105 @@
+{
+  "id": "oldKingsCrown",
+  "name": "La corona del viejo rey",
+  "plans": [
+    {
+      "id": "nobleza",
+      "title": "Nobleza",
+      "kind": "Facción",
+      "thesis": "No seas agresivo al principio. Los choques de las primeras rondas dan 1-3 de Influencia y los del final hasta 8: prepara el combo en las rondas 1-3 y gana fuerte en las 4-5.",
+      "style": "Defensa sólida y control de los Consejos.",
+      "strengths": [
+        "Buen principio y mitad de partida.",
+        "Control de los Consejos.",
+        "El mejor Favor del Reino del juego.",
+        "Ingresos que no dependen de ganar choques."
+      ],
+      "weaknesses": [
+        "Pocas acciones de Día: sus jugadas se ven venir.",
+        "Poca fuerza de combate sin Escuela de las Piedras.",
+        "Depende de conseguir ciertas cartas pronto."
+      ],
+      "phases": [
+        {
+          "when": "Rondas 1-2",
+          "goal": "Prepararse",
+          "do": [
+            "Gobierna una carta **cada otoño**, sobre todo en **Secretos**.",
+            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes: viaja con el Mercader y gana el Páramo.",
+            "Juega el Agente de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival."
+          ]
+        },
+        {
+          "when": "Ronda 3",
+          "goal": "Combo «Precio Dorado»",
+          "note": "Todo en el mismo otoño. El Juicio de Brujas tiene un solo uso: el combo se hace una vez por partida.",
+          "do": [
+            "Compra **la Reina** en El Manto con los 4 de Saber.",
+            "Con la Reina metes hasta 3 cartas de tu descarte o de la Pila Perdida en los Consejos. Suma tu acción de gobernar: 5-7 cartas en los Consejos.",
+            "Cobra los beneficios de los Consejos (por ejemplo, la acción de Secretos).",
+            "Activa el **Juicio de Brujas**: echas a los rivales de un Consejo y devuelves tus cartas de los Consejos al mazo, +1 de Saber por cada una.",
+            "Gasta ese Saber al momento: primero **Banco Real** (ingresos fijos); después Virrey o Muro Dorado."
+          ],
+          "ordered": true,
+          "check": true
+        },
+        {
+          "when": "Rondas 4-5",
+          "goal": "Fortaleza en el Campo de Batalla",
+          "do": [
+            "Es la región que más Influencia da y deja a los rivales sin llegar al Campo de Cosecha, así que no te quitan el Favor.",
+            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, una máquina de guerra desplegada con **Ley Marcial** y tu Heredero invulnerable con la **Guardia Real**.",
+            "Son unos 28 de fuerza que Letal no puede tocar: Letal elimina cartas, nunca simpatizantes."
+          ]
+        }
+      ],
+      "keys": [
+        {
+          "title": "Escuela de las Piedras",
+          "when": "Primavera · 1 uso",
+          "text": "Esa ronda cada simpatizante suma +2 y en ese invierno no se pierden. Guárdala para la fortaleza final, cuando tengas los 5 disponibles."
+        },
+        {
+          "title": "Ley Marcial",
+          "when": "Primavera · 2 usos",
+          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa: cómprala antes en El Manto y despliégala el otoño anterior."
+        },
+        {
+          "title": "Juicio de Brujas",
+          "when": "Otoño · 1 uso",
+          "text": "Pieza central del Precio Dorado. Elige el Consejo con más cartas rivales. Mover tus propias cartas al mazo es opcional: da Saber y retrasa el Desgaste."
+        },
+        {
+          "title": "Sello Real",
+          "when": "Al resolver pujas · 1 uso",
+          "text": "Las pujas rivales valen 0. Úsalo cuando salga una carta de reino que combine contigo. Puedes pujar con una carta floja, pero esa carta es la que luego defiende la carta de reino."
+        },
+        {
+          "title": "Guardia Real (Favor)",
+          "when": "Primavera · 3 usos",
+          "text": "Por defecto, +1 de Influencia. Si un rival tiene cartas con Letal, haz invulnerable a tu Heredero. El Favor también desempata al final."
+        }
+      ],
+      "cards": {
+        "title": "Cartas de reino que te convienen",
+        "items": [
+          "**Gremio de Asesinos** o **Lanza del Viejo Rey**: con la Guardia Real, Heredero invulnerable y letal.",
+          "**Coronas de Lata**: más votos.",
+          "**Taller de Ingenieros**, **Corceles Reales** y **Sabuesos de Guerra**: redesplegar máquinas de guerra."
+        ]
+      },
+      "warnings": [
+        "Contra flanqueos, guarda en la mano una Treta, un Heredero y un Agente para poder meter Letal en el choque.",
+        "Ir último en el orden de turno te deja colocar los marcadores de choque y decidir en qué orden se resuelven las regiones.",
+        "Si vas empatado al final, gana el Campo de Cosecha en las últimas rondas: el Favor del Reino deshace el empate.",
+        "No termines con tácticas sin usar: es ventaja perdida."
+      ],
+      "pending": "La Reina, su efecto y los nombres de las cartas de El Manto salen de un resumen automático del vídeo. Compruébalos con las cartas reales.",
+      "sources": [
+        { "title": "Guía de la Nobleza de Jaffles (playtester), vídeo", "url": "https://youtu.be/ZlNs_WyF8Y0" },
+        { "title": "Introductory Strategy Guide (Eerie Idol Games)", "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf" },
+        { "title": "Reglamento de La corona del viejo rey (inglés)" }
+      ]
+    }
+  ]
+}

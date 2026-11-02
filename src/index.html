@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es" data-version="__APP_VERSION__">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jugada Maestra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Las mejores estrategias para ganar en vuestros juegos de mesa.">
+<meta name="theme-color" content="#eef0f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12151d" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; color-scheme: light; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+
+/* Hermana de Ronda Cero: misma columna estrecha para leer con el móvil en la mesa,
+   mismas fuentes y neutros; el acento pasa del rojo de dado al oro de la victoria. */
+:root {
+  --bg: #eef0f4;
+  --surface: #ffffff;
+  --ink: #1b2130;
+  --muted: #5d6578;
+  --line: #d5d9e2;
+  --accent: #946405;
+  --accent-soft: #f4e8cc;
+  --good: #2f7d55;
+  --good-soft: #dcefe4;
+  --bad: #b2412a;
+  --bad-soft: #f6e0da;
+  --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12151d; --surface: #1b202b; --ink: #e8ebf2; --muted: #9aa2b4; --line: #2d3442;
+  --accent: #e3b450; --accent-soft: #3a2f15; --good: #5cc58f; --good-soft: #17301f;
+  --bad: #f08a70; --bad-soft: #3a211b; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #12151d; --surface: #1b202b; --ink: #e8ebf2; --muted: #9aa2b4; --line: #2d3442;
+  --accent: #e3b450; --accent-soft: #3a2f15; --good: #5cc58f; --good-soft: #17301f;
+  --bad: #f08a70; --bad-soft: #3a211b; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 640px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 12px 64px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+b { font-weight: 700; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); margin-bottom: 20px; min-height: 61px; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 8px; background: none; border: 0; padding: 0; }
+.mark { width: 22px; height: 22px; border-radius: 5px; background: var(--accent); display: grid; place-items: center; }
+.mark svg { width: 14px; height: 14px; fill: var(--surface); }
+.version { margin-left: auto; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.update { margin-left: auto; border: 0; background: var(--accent); color: var(--surface); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 15px; }
+
+/* Lista */
+.intro { color: var(--muted); margin: 0 0 18px; }
+.games { display: grid; gap: 12px; }
+.game { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px 12px 12px; display: grid; grid-template-columns: auto 1fr auto; gap: 2px 14px; align-items: center; }
+.game:hover { border-color: var(--accent); }
+.game[style*="--tint"] { background: color-mix(in srgb, var(--tint) 15%, var(--surface)); border-color: color-mix(in srgb, var(--tint) 22%, var(--line)); }
+.game .cover { grid-row: 1 / span 2; width: 56px; height: 56px; border-radius: 10px; object-fit: cover; box-shadow: 0 1px 3px rgba(10, 14, 24, .18); }
+.game .cover.mono { display: grid; place-items: center; font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--muted); background: var(--bg); box-shadow: none; }
+.game h2 { font-size: 19px; font-weight: 500; grid-column: 2; }
+.game .meta { color: var(--muted); font-size: 15px; grid-column: 2; }
+.game .count { grid-row: 1 / span 2; grid-column: 3; font-family: var(--display); font-size: 14px; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 6px 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.empty { color: var(--muted); font-size: 15px; margin-top: 22px; }
+
+/* Juego */
+.title-block { display: grid; gap: 4px; margin-bottom: 16px; }
+.title-block h1 { font-size: clamp(22px, 6vw, 30px); font-weight: 700; }
+.plans { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.plans button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 14px; }
+.plans button small { color: var(--muted); font-size: 13px; margin-left: 4px; }
+.plans button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.plans button[aria-pressed="true"] small { color: inherit; opacity: .7; }
+
+.thesis { background: var(--accent-soft); border-radius: 14px; padding: 16px 18px; display: grid; gap: 6px; }
+.thesis .eyebrow { color: var(--accent); }
+.thesis p { font-size: 18px; line-height: 1.45; }
+.thesis .style { font-size: 15px; color: var(--muted); }
+
+section.sec { margin-top: 28px; display: grid; gap: 10px; }
+section.sec > h2 { font-size: 16px; font-weight: 500; }
+
+.sw { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .sw { grid-template-columns: 1fr; } }
+.sw > div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.sw h3 { font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+.sw h3::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--good); }
+.sw .weak h3::before { background: var(--bad); }
+.sw ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 15px; }
+
+/* Ronda a ronda: una línea de tiempo vertical, porque el orden importa */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.phase { display: grid; grid-template-columns: 22px 1fr; gap: 12px; }
+.phase .rail { display: flex; flex-direction: column; align-items: center; }
+.phase .dot { width: 16px; height: 16px; border-radius: 50%; border: 3px solid var(--accent); background: var(--surface); margin-top: 16px; flex: none; }
+.phase .line { flex: 1; width: 2px; background: var(--line); }
+.phase:last-child .line { background: transparent; }
+.phase .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-bottom: 10px; display: grid; gap: 8px; min-width: 0; }
+.phase .when { font-family: var(--display); font-size: 13px; color: var(--accent); }
+.phase h3 { font-size: 17px; font-weight: 500; }
+.phase ul, .phase ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.phase ol li::marker { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.keys { display: grid; gap: 8px; }
+.key { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 6px; }
+.key .head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; }
+.key h3 { font-size: 16px; font-weight: 500; }
+.chip { font-size: 13px; color: var(--muted); background: var(--bg); border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+.key p { font-size: 16px; }
+
+.plain { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.note { font-size: 15px; border-radius: 10px; padding: 10px 12px; }
+.note.check { background: var(--bad-soft); }
+.note.check b { color: var(--bad); }
+.note.muted { background: var(--bg); color: var(--muted); }
+.flag { font-size: 12px; font-weight: 700; color: var(--bad); background: var(--bad-soft); border-radius: 999px; padding: 1px 8px; margin-left: 6px; white-space: nowrap; vertical-align: 2px; font-family: var(--body); }
+
+.sources { margin-top: 32px; font-size: 13px; color: var(--muted); display: grid; gap: 4px; }
+.sources a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <button class="brand" id="home" type="button" aria-label="Inicio">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7l4.5 4L12 4l4.5 7L21 7l-2 12H5z"/></svg></span>
+      Jugada Maestra
+    </button>
+    <button class="update" id="update" type="button" hidden>Actualizar</button>
+  </header>
+  <main id="app"></main>
+</div>
+<script>window.__GAMES__ = null;</script>
+<script src="app.js"></script>
+</body>
+</html>

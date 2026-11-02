@@ -1,0 +1,12 @@
+{
+  "name": "boardgames-strategy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jugada Maestra: las mejores estrategias para ganar en nuestros juegos de mesa (PWA).",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs",
+    "serve": "npm run build && npx --yes serve@14.2.4 dist -l 4174"
+  }
+}
