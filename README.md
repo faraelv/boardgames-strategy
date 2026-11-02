@@ -1,5 +1,7 @@
 # Jugada Maestra
 
+
+**App:** https://faraelv.github.io/boardgames-strategy/ · Repositorio: `faraelv/boardgames-strategy`
 PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego. Ronda Cero se queda con la preparación, el turno y los puntos; aquí no se repite nada de eso.
 
 - Misma estructura que Ronda Cero: un JSON por juego en `games/`, app en `src/`, `scripts/build.mjs` construye `dist/`.
