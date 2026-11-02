@@ -27,4 +27,5 @@ PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego
 ## Contenido actual
 - La corona del viejo rey · Nobleza (guía de Jaffles). Pendiente: comprobar la Reina y las cartas de El Manto.
 - Brass: Birmingham · Claves comunes, Hierro y cerveza (BRIC), Manufacturas y cerámica, Algodón. Pendiente: PV de las fundiciones.
+- SETI · Plan general (guía de SpiderForge) y Especies. Pendiente: detalles de Centaurianos y 'Oumuamua.
 - Five Tribes · Consejos sueltos (de dudas resueltas en partida).

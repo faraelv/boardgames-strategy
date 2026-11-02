@@ -1,0 +1,144 @@
+{
+  "id": "seti",
+  "name": "SETI",
+  "plans": [
+    {
+      "id": "general",
+      "title": "Plan general",
+      "kind": "Ronda a ronda",
+      "thesis": "No hay un combo que rompa el juego: se gana con pequeñas ventajas turno a turno. Motor de ingresos y signos de vida en la ronda 1, cartas y tecnologías en las rondas 2-3, y puntos puros al final.",
+      "style": "Basado en la guía de SpiderForge GAMES, contrastada con el reglamento.",
+      "strengths": [
+        "Las especies extraterrestres cambian la economía a mitad de partida: quien se adapta antes, gana.",
+        "Las cartas sirven para casi todo (jugarlas, descartarlas, guardarlas para ingresos), así que casi siempre hay una jugada útil."
+      ],
+      "weaknesses": [
+        "Orbitar, aterrizar y rastrear dejan de compensar a partir de la ronda 2 si no tienes tecnologías o cartas que lo abaraten.",
+        "Las primeras especies suelen salir en la ronda 2 o 3: si no has aportado signos de vida, te quedas sin sus cartas, que son más potentes."
+      ],
+      "phases": [
+        {
+          "when": "Preparación y ronda 1",
+          "goal": "Construir el motor",
+          "do": [
+            "Elige bien la carta que guardas para ingresos en la preparación: su icono de la esquina es lo que cobrarás cada ronda. Lo ideal, créditos.",
+            "Orden de ingresos: primero **créditos** (lanzar sondas y jugar cartas), luego **energía** y deja las cartas para más adelante.",
+            "Lanza a Venus o Júpiter solo si están **alineados con la Tierra**: cuesta unos 6 recursos y te devuelve más. Hazlo en la ronda 1 o 2.",
+            "Rastrear al principio vale sobre todo por los datos. Llenar la fila superior de la computadora y **analizar** (1 de energía) en la ronda 1 es muy rentable: por el camino cubres la casilla que te da ingresos y al analizar marcas un signo de vida."
+          ]
+        },
+        {
+          "when": "Rondas 2-3",
+          "goal": "Cartas y tecnologías",
+          "do": [
+            "Deja que la mano te guíe: con descuentos para aterrizar, especialízate en aterrizar; con cartas de rastreo, en rastrear.",
+            "Juega las **misiones** pronto: cuantas más rondas estén en juego, más ocasiones tienes de activarlas. Completarlas es una acción sin coste.",
+            "Coge tecnologías que apoyen tus cartas. Si vas a rastrear mucho: la de telescopio que suma una señal en el sector de Mercurio y la que te deja marcar un sector adyacente a la Tierra."
+          ]
+        },
+        {
+          "when": "Rondas 4-5",
+          "goal": "Puntos puros",
+          "do": [
+            "No gastes acciones en subir ingresos: ya no te da tiempo a cobrarlos.",
+            "Mira los planetas lejanos: Urano y Neptuno aguantan el valor al final porque dan beneficios y lunas con muchos puntos, no ingresos.",
+            "Si no tienes una acción rentable, **pasa**. No hagas cambios 2 a 1 ni descartes cartas solo por alargar el turno."
+          ]
+        }
+      ],
+      "keys": [
+        {
+          "title": "Marco de valor",
+          "when": "Para decidir cada acción",
+          "text": "Valor aproximado en puntos: créditos, energía y cartas, unos **3** cada uno; datos y publicidad, unos **2**. Un aumento de ingresos vale unos 11 en la ronda 1 y casi nada en la 5. Un signo de vida vale unos 11 en la ronda 1 y cae a medida que se llenan los tableros."
+        },
+        {
+          "title": "Segunda ficha en un sector",
+          "when": "Al rastrear",
+          "text": "Los empates en un sector los gana quien marcó **después**. Si pones una segunda ficha y otro cierra el sector, pierdes valor. A 2 jugadores, no la pongas salvo que estés seguro de ganarlo."
+        },
+        {
+          "title": "Cartas situacionales",
+          "when": "Al jugar cartas caras",
+          "text": "No juegues una carta cara solo porque puedes. Las que marcan muchas señales, como el telescopio de hidrógeno canadiense, guárdalas para cuando completen un sector en ese mismo turno."
+        },
+        {
+          "title": "Pasar pronto",
+          "when": "Final de ronda",
+          "text": "Quien pasa antes elige mejor carta de final de ronda. Recuerda que al pasar no puedes quedarte con más de 4 cartas en la mano."
+        },
+        {
+          "title": "Alineaciones",
+          "when": "Al mover sondas",
+          "text": "Cada tecnología que investigas y el primer jugador que pasa rotan el sistema solar. Anticipa la rotación: puede acercarte un planeta gratis o meterte en asteroides."
+        }
+      ],
+      "warnings": [
+        "A 2 jugadores los sectores tardan más en completarse: se aterriza más y se rastrea menos.",
+        "Con Space Agencies y organizaciones la partida empieza en la ronda 2 (4 rondas): el motor se monta con las cartas de inicio rápido y la fase de cartas y tecnologías llega antes."
+      ],
+      "pending": "Las cifras del marco de valor son una estimación de la guía de SpiderForge, no del reglamento. Úsalas como referencia, no como regla.",
+      "sources": [
+        { "title": "Estrategias aportadas por Rafa (guía de SpiderForge GAMES)" },
+        { "title": "Reglamento de SETI (en el proyecto)" },
+        { "title": "Reseña de SETI y Space Agencies (The Opinionated Gamers)", "url": "https://opinionatedgamers.com/2026/04/10/review-seti-and-seti-space-agencies/" },
+        { "title": "Reseña de SETI (Misut Meeple)", "url": "https://misutmeeple.com/en/2024/12/review-seti-search-for-extraterrestrial-intelligence/" }
+      ]
+    },
+    {
+      "id": "especies",
+      "title": "Especies",
+      "kind": "Al descubrirlas",
+      "thesis": "Cuando se revela una especie, la economía cambia: reorienta tu plan hacia lo que esa especie premia y céntrate en una de las dos.",
+      "style": "Las cartas de especie son algo más potentes que las normales y solo se reparten a quien aportó signos de vida al descubrirla.",
+      "keys": [
+        {
+          "title": "Exertianos",
+          "when": "Farol y peligro",
+          "text": "Al final, quien suma más peligro pierde una décima parte de sus puntos. Las cartas se juegan boca abajo y se revelan al final: juega tu carta de 0 peligro para que los demás crean que vas cargado y se frenen."
+        },
+        {
+          "title": "Mascamites",
+          "when": "Aterrizajes",
+          "text": "Tienen muy buenas cartas, muchas de aterrizajes con descuento y de recoger muestras (están en Júpiter y Saturno). Si salen, necesitas menos la tecnología de aterrizaje. Aterriza cuando estén alineados y lleva la muestra a su destino cuanto antes."
+        },
+        {
+          "title": "'Oumuamua",
+          "when": "Carrera de exofósiles",
+          "text": "Sus exofósiles valen muchos puntos, así que rastrear su loseta compensa mucho. Si sale, prepárate para una carrera por acumularlos antes que los rivales."
+        },
+        {
+          "title": "Centaurianos",
+          "when": "Hitos de 15 puntos",
+          "text": "Tus recompensas centaurianas se activan al llegar a hitos 15 puntos por delante de donde estabas. Una jugada que te dé 15 puntos de golpe puede activar varias a la vez. Recuerda que sus cartas se pagan con energía."
+        },
+        {
+          "title": "Anomalías",
+          "when": "Micro-recompensas",
+          "text": "Cobras pequeños premios cada vez que la Tierra comparte sector con una anomalía donde vas primero. Como el sistema solar rota con cada tecnología y al primer pase, a 4 jugadores salta a menudo; a 2, quizá una o dos veces. Es la especie menos agresiva."
+        },
+        {
+          "title": "Amoeba",
+          "when": "Space Agencies",
+          "text": "Al marcar sus espacios ganas también los orgánulos de esa sección, y los orgánulos se mueven cada vez que alguien los gana. Mira dónde van a quedar antes de marcar."
+        },
+        {
+          "title": "Arkhos",
+          "when": "Space Agencies",
+          "text": "Su tablero se abre por niveles a medida que rompes tus cartas de seguridad. Rómpelas pronto para acceder a los espacios buenos."
+        },
+        {
+          "title": "Glyphids",
+          "when": "Space Agencies",
+          "text": "Los glifos que no coloques puntúan por sets de glifos distintos (1/3/5/8/11/15/20). Ve a por variedad: orbitar, aterrizar, ganar sectores y desarrollar tecnologías dan glifos distintos."
+        }
+      ],
+      "pending": "Los consejos de Centaurianos y 'Oumuamua de la guía (una casilla de 3 datos que da exactamente 15 puntos y hasta 25 puntos con 4 exofósiles) no los he podido comprobar sin las hojas de especie. Los de Amoeba, Arkhos y Glyphids son míos, sacados de sus reglas.",
+      "sources": [
+        { "title": "Estrategias aportadas por Rafa (guía de SpiderForge GAMES)" },
+        { "title": "Reglas de especies de Ronda Cero (hojas del mod de TTS)" },
+        { "title": "Reglamento de SETI (en el proyecto)" }
+      ]
+    }
+  ]
+}
