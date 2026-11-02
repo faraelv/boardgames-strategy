@@ -1,0 +1,310 @@
+{
+  "id": "brassBirmingham",
+  "name": "Brass: Birmingham",
+  "plans": [
+    {
+      "id": "basicos",
+      "title": "Claves comunes",
+      "kind": "Para cualquier plan",
+      "thesis": "Brass se gana optimizando acciones: con 31, 35 o 39 acciones por partida (4, 3 o 2 jugadores), cada una tiene que voltear una loseta o sumar un enlace que puntúe pronto.",
+      "style": "Céntrate en una o dos industrias, entra en la Era del Ferrocarril con dinero y cerveza, y vigila el orden de turno.",
+      "keys": [
+        {
+          "title": "Nivel 2+ en Canales",
+          "when": "Era de los Canales",
+          "text": "Las losetas de nivel 1 desaparecen al acabar los Canales; las de nivel 2 o más se quedan y **puntúan en las dos eras**. Desarrolla para saltarte el nivel 1 y construye directamente de nivel 2 o 3."
+        },
+        {
+          "title": "Cerveza",
+          "when": "Toda la partida",
+          "text": "Es el cuello de botella: da puntos e ingresos, no necesita vender y sirve para vender y para la doble vía. Gástala pronto, aprovecha la de los rivales cuando puedas y niégasela al final."
+        },
+        {
+          "title": "Orden de turno",
+          "when": "Cada ronda",
+          "text": "Empieza quien menos gastó. Las acciones que no cuestan dinero (préstamo, explorar, desarrollar con hierro gratis) te ponen primero y te dejan encadenar dos acciones seguidas para quitarle un sitio clave a alguien."
+        },
+        {
+          "title": "Pocos canales, muchas vías",
+          "when": "Enlaces",
+          "text": "Los canales desaparecen al acabar la era: solo compensan si te van a dar 4-5 PV o abren una venta. En el Ferrocarril, las vías son prioridad, sobre todo con cerveza disponible."
+        },
+        {
+          "title": "Carbón con cabeza",
+          "when": "Antes de una racha de vías",
+          "text": "Las minas dan pocos PV y el carbón sobrante ayuda a los rivales a construir algodón y manufacturas. Constrúyelas cuando el mercado esté caro y justo antes de tus dobles vías."
+        },
+        {
+          "title": "Hierro como batería",
+          "when": "Era de los Canales",
+          "text": "Una fundición te da hierro gratis para 2-4 desarrollos. Vigila Coalbrookdale: es donde los rivales sacan hierro fácil."
+        },
+        {
+          "title": "Cervecería para el último turno",
+          "when": "Ferrocarril · último turno",
+          "text": "Guarda una cervecería de nivel 2+ en tu tablero. En tu último turno: acción 1, constrúyela (en una casilla libre o sobre tu propia cervecería); acción 2, vende tu industria pesada (algodón de nivel 4, cerámica de nivel 3 o manufactura alta) sin depender de la cerveza de nadie."
+        }
+      ],
+      "cards": {
+        "title": "Gestión de cartas",
+        "items": [
+          "En los Canales a 4 jugadores juegas unas 15 cartas pero solo construyes unas 6 veces. Guarda las que necesitas para construir (localizaciones para cervecerías, industrias de tu plan, y Birmingham, Coventry o Dudley) y gasta el resto en desarrollar, préstamos o enlaces.",
+          "**Explorar**: descartas 3 cartas (la de la acción y 2 más) y coges un comodín de localización y uno de industria. No puedes hacerlo si ya tienes un comodín en la mano. Úsalo cuando desbloquee varias acciones o para ir primero, no por costumbre."
+        ]
+      },
+      "warnings": [
+        "**Préstamo**: £30 y bajas 3 niveles de ingresos (niveles, no casillas). No puedes bajar de -10.",
+        "Solo puedes sobreconstruir la mina o la fundición de un rival cuando no queda ni un cubo de ese recurso en el tablero ni en el mercado.",
+        "La cerveza propia no necesita conexión; la de un rival, sí. La de los mercantes solo vale para vender, nunca para la doble vía.",
+        "En los últimos 3-4 turnos, cuenta la cerveza que queda y las ventas posibles: a veces negar una venta rival vale más que una venta floja tuya."
+      ],
+      "sources": [
+        {
+          "title": "Reglamento de Brass: Birmingham (Roxley)",
+          "url": "https://cdn.1j1ju.com/medias/60/39/64-brass-birmingham-rulebook.pdf"
+        },
+        {
+          "title": "Beginners' Guide: avoiding simple mistakes",
+          "url": "https://gamepretty.com/brass-birmingham-beginners-guide-avoiding-simple-mistakes/"
+        },
+        {
+          "title": "Understanding the industries (Erik Twice)",
+          "url": "https://eriktwice.com/en/2021/01/15/brass-birmingham-understanding-the-industries/"
+        },
+        {
+          "title": "Tempo plays & openings (The Table Priest)",
+          "url": "https://thetablepriest.com/mastering-brass-birmingham-tempo-plays-high-impact-openings/"
+        }
+      ]
+    },
+    {
+      "id": "bric",
+      "title": "Hierro y cerveza",
+      "kind": "Estrategia BRIC",
+      "thesis": "Fundiciones y cervecerías de nivel 2+ en los Canales, que puntúan dos veces, y salida explosiva en el Ferrocarril con dos dobles vías seguidas pagadas con tu propia cerveza.",
+      "style": "Cervecerías, vías, hierro y carbón. El plan más estable: no depende de vender.",
+      "strengths": [
+        "Ingresos y PV sin necesidad de vender a los mercantes.",
+        "Las fundiciones te dan hierro gratis para desarrollar.",
+        "La cerveza propia te asegura la doble vía al empezar el Ferrocarril."
+      ],
+      "weaknesses": [
+        "Si alguien te gasta el hierro o la cerveza, voltea tus losetas pero también avanza su plan.",
+        "Los sitios de cervecería son pocos y todos los pelean.",
+        "Dos préstamos al final de los Canales te dejan los ingresos muy bajos durante unas rondas."
+      ],
+      "phases": [
+        {
+          "when": "Canales · ronda 1",
+          "goal": "Elegir arranque (1 sola acción)",
+          "do": [
+            "**Opción A, orden de turno**: pide un préstamo o explora (no gastas dinero) para ir primero en la ronda 2 y encadenar enlace + fundición.",
+            "**Opción B, desarrollo**: desarrolla la mina de nivel 1 y la cervecería o la fundición de nivel 1. Quien desarrolle después pagará el hierro más caro."
+          ]
+        },
+        {
+          "when": "Canales · rondas 2-6",
+          "goal": "Fundiciones y cervecerías",
+          "do": [
+            "Construye pronto fundiciones de nivel 2 y 3 (Birmingham, Coalbrookdale…). Puntúan al voltearse y otra vez al final del Ferrocarril.",
+            "Constrúyelas aunque el mercado de hierro esté lleno: el hierro no necesita conexión, así que alguien lo gastará antes de que acabe la era.",
+            "Construye 2-3 cervecerías de nivel 2+. Si nadie usa tu cerveza, se queda en el tablero para tus dobles vías; si la usan, se voltean y cobras PV e ingresos."
+          ]
+        },
+        {
+          "when": "Canales · última ronda",
+          "goal": "Cargar la caja",
+          "do": [
+            "Dos préstamos seguidos: £60 en mano sin gastar nada, así que empiezas primero el Ferrocarril.",
+            "Te bajan 6 niveles de ingresos; las cervecerías que voltees al principio de la era siguiente los recuperan."
+          ],
+          "check": true
+        },
+        {
+          "when": "Ferrocarril · rondas 1-2",
+          "goal": "Salida explosiva",
+          "do": [
+            "Primero y con £60: **dos dobles vías seguidas** (£15 cada una, 1 carbón por vía y 1 cerveza de cervecería).",
+            "Prioriza las rutas que más dan: hacia Birmingham y por el norte (Stoke-on-Trent, Uttoxeter, Derby).",
+            "Al gastar tu cerveza, tus cervecerías se voltean y recuperas ingresos enseguida.",
+            "Gasta el carbón de tus minas no conectadas a un mercante: los rivales no pueden usarlo sin conexión y tú volteas la mina."
+          ]
+        },
+        {
+          "when": "Ferrocarril · rondas finales",
+          "goal": "Exprimir",
+          "do": [
+            "Sigue con dobles vías mientras tengas cerveza. Sin ella, vías sueltas, minas de nivel 3-4 o fundiciones de nivel alto.",
+            "En el Ferrocarril no se pueden construir la mina ni la fundición de nivel 1: si te queda alguna, desarrolla para llegar a las de nivel alto."
+          ]
+        }
+      ],
+      "warnings": [
+        "Comprueba en tu tablero de jugador los PV de cada fundición antes de planificar: la idea es que las de nivel 2+ puntúan en las dos eras.",
+        "Entra en el Ferrocarril con dinero para dos dobles vías en dos rondas; quedarse atrás en las vías cuesta mucho."
+      ],
+      "pending": "Los PV de las fundiciones que traía tu texto (7 y 9 para los niveles 2 y 3) no coinciden con lo que yo tengo, que los sitúa en los niveles 3 y 4. Compruébalo con el tablero de jugador.",
+      "sources": [
+        {
+          "title": "Estrategias aportadas por Rafa"
+        },
+        {
+          "title": "Reglamento de Brass: Birmingham (Roxley)",
+          "url": "https://cdn.1j1ju.com/medias/60/39/64-brass-birmingham-rulebook.pdf"
+        },
+        {
+          "title": "Tempo plays & openings (The Table Priest)",
+          "url": "https://thetablepriest.com/mastering-brass-birmingham-tempo-plays-high-impact-openings/"
+        }
+      ]
+    },
+    {
+      "id": "manufacturas",
+      "title": "Manufacturas y cerámica",
+      "kind": "Estrategia de venta",
+      "thesis": "Dos manufacturas de nivel 2 vendidas con tu propia cerveza en los Canales, el arranque de vías del plan BRIC en el Ferrocarril y un giro a la cerámica cuando las vías se pongan caras.",
+      "strengths": [
+        "Manufacturas de nivel 1 y 2: fáciles y constantes.",
+        "Las de nivel alto sirven para puntos tardíos y es más fácil pasarse a ellas tarde que al algodón sin desarrollar.",
+        "La cerámica tiene el techo de puntos más alto del juego."
+      ],
+      "weaknesses": [
+        "Las manufacturas de nivel 3 en adelante exigen muchos desarrollos.",
+        "Solo hay 4 sitios de cerámica en el mapa y son fáciles de bloquear.",
+        "Depende de vender: sin cerveza, se atasca."
+      ],
+      "phases": [
+        {
+          "when": "Canales · ronda 1",
+          "goal": "Limpiar niveles 1",
+          "do": [
+            "Desarrolla la manufactura de nivel 1 y la mina de nivel 1."
+          ]
+        },
+        {
+          "when": "Canales · rondas intermedias",
+          "goal": "Montar la venta",
+          "do": [
+            "Pon una fundición en Birmingham (o sobreconstruye la de un rival si no queda hierro) para no perder la ciudad clave en el Ferrocarril.",
+            "Construye 2 manufacturas de nivel 2, por ejemplo en Walsall y Wolverhampton.",
+            "Ten una cervecería propia (Stafford o Nuneaton) antes de conectar: tu cerveza no necesita conexión.",
+            "Une con canal manufacturas, cerveza y mercante (Oxford o Shrewsbury) y vende las dos en el mismo turno."
+          ]
+        },
+        {
+          "when": "Canales · cierre",
+          "goal": "Liquidez",
+          "do": [
+            "Pide préstamos para entrar con dinero en el Ferrocarril."
+          ]
+        },
+        {
+          "when": "Ferrocarril · inicio",
+          "goal": "Vías",
+          "do": [
+            "Aplica el arranque del plan **Hierro y cerveza**: cervecerías y doble vía por el norte."
+          ]
+        },
+        {
+          "when": "Ferrocarril · rondas medias y finales",
+          "goal": "Giro a la cerámica",
+          "do": [
+            "Cuando las vías estén muy disputadas, cambia a cerámica en vez de seguir desarrollando manufacturas.",
+            "**Cerámica nivel 1**: no se puede desarrollar (icono de bombilla). Constrúyela y véndela con cerveza de un mercante; da mucho PV por acción.",
+            "**Cerámica nivel 2**: da pocos PV; constrúyela en un sitio clave (Belper, por ejemplo) para ocupar la casilla y abrirte paso al nivel 3.",
+            "**Cerámica nivel 3**: tampoco se desarrolla y pide 2 cervezas para venderse, pero da muchos PV. Júntala con la cerveza de un mercante y la de tu última cervecería."
+          ]
+        }
+      ],
+      "warnings": [
+        "La manufactura de nivel 3 es casi solo de bloqueo y la de nivel 4 rara vez compensa: si las tienes delante, desarróllalas.",
+        "Si puedes, adelanta la cerámica de nivel 3 a los Canales: puntúa en las dos eras. La de nivel 1 desaparece al acabar los Canales, así que en esa era solo puntúa una vez.",
+        "Solo vas a cerámica si tu mano y los mercantes de la partida lo permiten: una cerámica sin venta es un turno tirado."
+      ],
+      "sources": [
+        {
+          "title": "Estrategias aportadas por Rafa"
+        },
+        {
+          "title": "Understanding the industries (Erik Twice)",
+          "url": "https://eriktwice.com/en/2021/01/15/brass-birmingham-understanding-the-industries/"
+        },
+        {
+          "title": "Beginners' Guide: avoiding simple mistakes",
+          "url": "https://gamepretty.com/brass-birmingham-beginners-guide-avoiding-simple-mistakes/"
+        }
+      ]
+    },
+    {
+      "id": "algodon",
+      "title": "Algodón",
+      "kind": "Mejor a 2-3 jugadores",
+      "thesis": "Desarrolla mucho en los Canales para saltarte los niveles bajos y llena el Ferrocarril de fábricas de algodón de nivel 3 y 4, de las losetas que más PV dan por acción.",
+      "style": "Mejor a 2 o 3 jugadores: hay más turnos y menos bloqueo de casillas.",
+      "strengths": [
+        "Las fábricas de nivel 3 y 4 dan muchísimos PV por acción.",
+        "Una de nivel 3 construida en los Canales puntúa dos veces (9 + 9).",
+        "El desarrollo intensivo te deja buenas losetas para todo el Ferrocarril."
+      ],
+      "weaknesses": [
+        "Caro en dinero, hierro, carbón y cerveza.",
+        "Si te retrasas mucho desarrollando, llegas al Ferrocarril por detrás en vías.",
+        "A 4 jugadores las casillas de algodón se bloquean pronto."
+      ],
+      "phases": [
+        {
+          "when": "Canales · rondas 1-4",
+          "goal": "Desarrollo intensivo",
+          "do": [
+            "Dedica 3-4 acciones a desarrollar: las 3 fábricas de algodón de nivel 1, la cervecería de nivel 1 y las mina y fundición de nivel 1.",
+            "Opcional: desarrolla también las de nivel 2 para ir directo a las de nivel 3 y 4.",
+            "Ten una fundición propia: cada desarrollo cuesta 1 hierro."
+          ]
+        },
+        {
+          "when": "Canales · resto",
+          "goal": "Construcción mínima",
+          "do": [
+            "Construye 1-2 fábricas (de nivel 2, o mejor de nivel 3 si llegas) y véndelas con tu propia cerveza antes de cerrar la era.",
+            "Hay dos caminos: correr a por el nivel 3 en los Canales (más PV, más riesgo de quedarte atrás) o un enfoque más corto que te deje entrar en el Ferrocarril igualado."
+          ]
+        },
+        {
+          "when": "Ferrocarril · inicio",
+          "goal": "Rutas",
+          "do": [
+            "Asegura las vías que conectan tus ciudades objetivo con cerveza y mercantes."
+          ]
+        },
+        {
+          "when": "Ferrocarril · final",
+          "goal": "Lluvia de puntos",
+          "do": [
+            "Construye y vende en masa fábricas de nivel 3 y 4."
+          ]
+        }
+      ],
+      "warnings": [
+        "A 2 jugadores, Kidderminster y Worcester son claves para el algodón.",
+        "No construyas las de nivel 1: lo normal es desarrollarlas."
+      ],
+      "sources": [
+        {
+          "title": "Estrategias aportadas por Rafa"
+        },
+        {
+          "title": "Reglamento de Brass: Birmingham (ejemplo de algodón de nivel 3)",
+          "url": "https://cdn.1j1ju.com/medias/60/39/64-brass-birmingham-rulebook.pdf"
+        },
+        {
+          "title": "Understanding the industries (Erik Twice)",
+          "url": "https://eriktwice.com/en/2021/01/15/brass-birmingham-understanding-the-industries/"
+        },
+        {
+          "title": "Beginners' Guide: avoiding simple mistakes",
+          "url": "https://gamepretty.com/brass-birmingham-beginners-guide-avoiding-simple-mistakes/"
+        }
+      ]
+    }
+  ]
+}
