@@ -85,7 +85,12 @@
         {
           "title": "Sello Real",
           "when": "Al resolver pujas · 1 uso",
-          "text": "Las pujas rivales valen 0, así que resuelves primero. Combínalo con el **Virrey**: si pujas con él para robar, la carta que defiende cuenta como fuerza 0 y te llevas la carta de reino que quieras, aunque esté bien defendida."
+          "text": "Las pujas rivales valen 0 esa ronda: resuelves primero y **nadie puede robarte** cartas de reino. Úsalo para coger la mejor carta del Gran Camino pujando con una carta floja (guardas las fuertes) o para proteger tus cartas de reino la ronda en que te las vayan a robar. No lo gastes con el Virrey: él ya roba solo."
+        },
+        {
+          "title": "Virrey",
+          "when": "Primavera · al pujar",
+          "text": "Puja con él para **robar**: la carta que defiende cuenta como fuerza 0, así que el robo sale siempre. Después se queda ocupando la carta robada con fuerza 11 y Resistente: para recuperarla, el rival necesita pujar con 12 o más."
         },
         {
           "title": "Guardia Real (Favor)",
