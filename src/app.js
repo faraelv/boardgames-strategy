@@ -26,9 +26,9 @@ function route() {
   if (!h) return renderList();
   const g = GAMES.find(g => h === g.id || h.startsWith(g.id + '-'));
   if (!g) return renderList();
-  const pid = h.slice(g.id.length + 1);
+  const [pid, tab] = h.slice(g.id.length + 1).split('-');
   const plan = g.plans.find(p => p.id === pid) || g.plans[0];
-  renderGame(g, plan);
+  renderGame(g, plan, tab);
 }
 
 function cover(g) {
@@ -61,29 +61,63 @@ function renderList() {
   scrollTo(0, 0);
 }
 
-function renderGame(g, plan) {
+// Cada plan se divide en pestañas para ver solo lo que hace falta en cada momento.
+// Solo aparecen las que tienen contenido; con una sola, no se muestra la barra.
+function tabsOf(plan) {
+  return [
+    ['resumen', 'Resumen', true],
+    ['rondas', 'Rondas', !!plan.phases],
+    ['tacticas', plan.phases ? 'Tácticas' : 'Claves', !!plan.keys],
+    ['cartas', 'Cartas', !!plan.cards]
+  ].filter(t => t[2]);
+}
+
+function renderGame(g, plan, tab) {
   document.title = `${g.name} · Jugada Maestra`;
+  const tabs = tabsOf(plan);
+  if (!tabs.some(t => t[0] === tab)) tab = tabs[0][0];
+  const go = (p, t) => location.replace('#' + g.id + '-' + p.id + (t && t !== 'resumen' ? '-' + t : ''));
+
   const parts = [
     el('div', { class: 'title-block' }, [el('span', { class: 'eyebrow' }, 'Estrategia'), el('h1', {}, g.name)])
   ];
-  if (g.plans.length > 1) parts.push(el('div', { class: 'plans', role: 'group', 'aria-label': 'Plan' }, g.plans.map(p =>
-    el('button', { type: 'button', 'aria-pressed': String(p === plan), onclick: () => { location.replace('#' + g.id + '-' + p.id); } },
+  // Al cambiar de plan se mantiene la pestaña si el otro plan también la tiene.
+  parts.push(el('div', { class: 'plans', role: 'group', 'aria-label': 'Plan' }, g.plans.map(p =>
+    el('button', { type: 'button', 'aria-pressed': String(p === plan), onclick: () => { if (p !== plan) go(p, tab); } },
       [p.title, p.kind ? el('small', {}, p.kind) : null]))));
-  else parts.push(el('div', { class: 'plans' }, el('button', { type: 'button', 'aria-pressed': 'true' }, [plan.title, plan.kind ? el('small', {}, plan.kind) : null])));
+  if (tabs.length > 1) parts.push(el('div', { class: 'tabs', role: 'tablist' }, tabs.map(([id, label]) =>
+    el('button', { type: 'button', role: 'tab', 'aria-selected': String(id === tab), onclick: () => { if (id !== tab) go(plan, id); } }, label))));
 
-  parts.push(el('div', { class: 'thesis' }, [
-    el('span', { class: 'eyebrow' }, 'La idea'),
-    R('p', plan.thesis),
-    plan.style ? R('p', plan.style, { class: 'style' }) : null
-  ]));
+  const view = ({ resumen, rondas, tacticas, cartas })[tab];
+  parts.push(...view(plan).filter(Boolean));
+  app.replaceChildren(...parts);
+  scrollTo(0, 0);
+}
 
-  if (plan.strengths || plan.weaknesses) parts.push(el('section', { class: 'sec' }, el('div', { class: 'sw' }, [
-    plan.strengths ? el('div', {}, [el('h3', {}, 'Puntos fuertes'), el('ul', {}, plan.strengths.map(t => R('li', t)))]) : null,
-    plan.weaknesses ? el('div', { class: 'weak' }, [el('h3', {}, 'Puntos débiles'), el('ul', {}, plan.weaknesses.map(t => R('li', t)))]) : null
-  ])));
+function resumen(plan) {
+  return [
+    el('div', { class: 'thesis' }, [
+      el('span', { class: 'eyebrow' }, 'La idea'),
+      R('p', plan.thesis),
+      plan.style ? R('p', plan.style, { class: 'style' }) : null
+    ]),
+    (plan.strengths || plan.weaknesses) ? el('section', { class: 'sec' }, el('div', { class: 'sw' }, [
+      plan.strengths ? el('div', {}, [el('h3', {}, 'Puntos fuertes'), el('ul', {}, plan.strengths.map(t => R('li', t)))]) : null,
+      plan.weaknesses ? el('div', { class: 'weak' }, [el('h3', {}, 'Puntos débiles'), el('ul', {}, plan.weaknesses.map(t => R('li', t)))]) : null
+    ])) : null,
+    plan.warnings ? el('section', { class: 'sec' }, [
+      el('h2', {}, 'Ojo'), el('ul', { class: 'plain' }, plan.warnings.map(t => R('li', t)))
+    ]) : null,
+    plan.pending ? el('section', { class: 'sec' }, el('p', { class: 'note check', html: '<b>Por verificar.</b> ' + rich(plan.pending) })) : null,
+    plan.sources ? el('div', { class: 'sources' }, [
+      el('span', { class: 'eyebrow' }, 'Fuentes'),
+      ...plan.sources.map(s => s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.title) : el('span', {}, s.title))
+    ]) : null
+  ];
+}
 
-  if (plan.phases) parts.push(el('section', { class: 'sec' }, [
-    el('h2', {}, 'Ronda a ronda'),
+function rondas(plan) {
+  return [el('section', { class: 'sec' }, [
     el('ol', { class: 'timeline' }, plan.phases.map(ph => el('li', { class: 'phase' }, [
       el('div', { class: 'rail', 'aria-hidden': 'true' }, [el('span', { class: 'dot' }), el('span', { class: 'line' })]),
       el('div', { class: 'card' }, [
@@ -93,45 +127,35 @@ function renderGame(g, plan) {
         ph.note ? R('p', ph.note, { class: 'note muted' }) : null
       ])
     ])))
-  ]));
+  ])];
+}
 
-  if (plan.keys) parts.push(el('section', { class: 'sec' }, [
-    el('h2', {}, plan.phases ? 'Cuándo usar cada táctica' : 'Claves'),
+function tacticas(plan) {
+  return [el('section', { class: 'sec' }, [
     el('div', { class: 'keys' }, plan.keys.map(k => el('div', { class: 'key' }, [
       el('div', { class: 'head' }, [el('h3', {}, k.title), k.when ? el('span', { class: 'chip' }, k.when) : null]),
       R('p', k.text)
     ])))
-  ]));
+  ])];
+}
 
-  if (plan.cards) parts.push(el('section', { class: 'sec' }, [
-    el('h2', {}, plan.cards.title),
+function cartas(plan) {
+  const c = plan.cards;
+  return [el('section', { class: 'sec' }, [
+    el('h2', {}, c.title),
     // Cartas con imagen: ilustración original arriba y el texto de la carta traducido en el panel de abajo.
-    plan.cards.items.some(c => typeof c === 'object')
-      ? el('div', { class: 'kcards' }, plan.cards.items.map(c => typeof c === 'string' ? R('p', c) : el('article', { class: 'kcard' }, [
-          c.image ? el('img', { src: c.image, alt: '', loading: 'lazy' }) : null,
+    c.items.some(x => typeof x === 'object')
+      ? el('div', { class: 'kcards' }, c.items.map(x => typeof x === 'string' ? R('p', x) : el('article', { class: 'kcard' }, [
+          x.image ? el('img', { src: x.image, alt: '', loading: 'lazy' }) : null,
           el('div', { class: 'panel' }, [
-            el('h3', {}, [c.name, c.original ? el('small', {}, c.original) : null]),
-            ...c.text.map(t => R('p', t))
+            el('h3', {}, [x.name, x.original ? el('small', {}, x.original) : null]),
+            ...x.text.map(t => R('p', t))
           ]),
-          c.why ? el('div', { class: 'why' }, [c.tag ? el('span', { class: 'tag' }, c.tag) : null, R('p', c.why)]) : null
+          x.why ? el('div', { class: 'why' }, [x.tag ? el('span', { class: 'tag' }, x.tag) : null, R('p', x.why)]) : null
         ])))
-      : el('ul', { class: 'plain' }, plan.cards.items.map(t => R('li', t))),
-    ...(plan.cards.after || []).map(t => R('p', t, { class: 'note muted' }))
-  ]));
-
-  if (plan.warnings) parts.push(el('section', { class: 'sec' }, [
-    el('h2', {}, 'Ojo'), el('ul', { class: 'plain' }, plan.warnings.map(t => R('li', t)))
-  ]));
-
-  if (plan.pending) parts.push(el('section', { class: 'sec' }, el('p', { class: 'note check', html: '<b>Por verificar.</b> ' + rich(plan.pending) })));
-
-  if (plan.sources) parts.push(el('div', { class: 'sources' }, [
-    el('span', { class: 'eyebrow' }, 'Fuentes'),
-    ...plan.sources.map(s => s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.title) : el('span', {}, s.title))
-  ]));
-
-  app.replaceChildren(...parts);
-  scrollTo(0, 0);
+      : el('ul', { class: 'plain' }, c.items.map(t => R('li', t))),
+    ...(c.after || []).map(t => R('p', t, { class: 'note muted' }))
+  ])];
 }
 
 document.getElementById('home').addEventListener('click', () => {

@@ -81,11 +81,18 @@ header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; b
 /* Juego */
 .title-block { display: grid; gap: 4px; margin-bottom: 16px; }
 .title-block h1 { font-size: clamp(22px, 6vw, 30px); font-weight: 700; }
-.plans { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.plans button { text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 14px; }
+.plans { display: flex; gap: 8px; margin: 0 -16px 14px; padding: 2px 16px 4px; overflow-x: auto; scrollbar-width: none; }
+.plans::-webkit-scrollbar { display: none; }
+.plans button { flex: none; white-space: nowrap; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 14px; }
 .plans button small { color: var(--muted); font-size: 13px; margin-left: 4px; }
 .plans button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
 .plans button[aria-pressed="true"] small { color: inherit; opacity: .7; }
+
+/* Pestañas del plan: fijas bajo la cabecera, como en Ronda Cero. */
+.tabs { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 61px); z-index: 4; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; background: var(--bg); padding: 4px; border: 1px solid var(--line); border-radius: 12px; margin: 0 0 16px; }
+.tabs button { border: 0; background: none; border-radius: 9px; padding: 9px 4px; font-weight: 700; font-size: 15px; color: var(--muted); }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(10, 14, 24, .12); }
+.tabs + .sec, .tabs + .thesis { margin-top: 0; }
 
 .thesis { background: var(--accent-soft); border-radius: 14px; padding: 16px 18px; display: grid; gap: 6px; }
 .thesis .eyebrow { color: var(--accent); }

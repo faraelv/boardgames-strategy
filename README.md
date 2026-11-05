@@ -7,7 +7,8 @@
 PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego. Ronda Cero se queda con la preparación, el turno y los puntos; aquí no se repite nada de eso.
 
 - Misma estructura que Ronda Cero: un JSON por juego en `games/`, app en `src/`, `scripts/build.mjs` construye `dist/`.
-- Funciona sin conexión, aviso de «Actualizar», pantalla siempre encendida, botón atrás de Android (navegación por `#juego` o `#juego-plan`).
+- Funciona sin conexión, aviso de «Actualizar», pantalla siempre encendida, botón atrás de Android (navegación por `#juego`, `#juego-plan` o `#juego-plan-pestaña`).
+- Cada plan va en pestañas: **Resumen** (idea, puntos fuertes y débiles, «Ojo», por verificar y fuentes), **Rondas** (`phases`), **Tácticas** o **Claves** (`keys`) y **Cartas** (`cards`). Solo salen las que tienen contenido.
 - `npm run check` valida los juegos; `npm run build` genera `dist/` y una vista previa de un solo fichero en `dist-preview/`.
 
 ## Cada actualización (obligatorio)
