@@ -26,34 +26,41 @@
           "do": [
             "Gobierna una carta **cada otoño**, sobre todo en **Secretos**.",
             "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes. Viaja en cada otoño con la carta que más Saber dé (la guía usa la de arquetipo **Comerciante**) y, si puedes, gana el **Páramo**: te deja viajar otra vez, incluso con la carta activa del choque.",
-            "Juega el Agente de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival."
+            "Juega el Agente de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival.",
+            "Prepara el combo: cuando viajes o descartes, que sean cartas **con votos** (martillo). Desde la Pila Perdida o el descarte son las que la Reina podrá meter en los Consejos."
           ]
         },
         {
           "when": "Ronda 3",
           "goal": "Combo «Precio Dorado»",
-          "note": "Todo en el mismo otoño. El Juicio de Brujas tiene un solo uso: el combo se hace una vez por partida.",
+          "note": "Todo en el mismo paso de Acción de otoño, en este orden. El Juicio de Brujas tiene un solo uso: el combo se hace una vez por partida.",
           "do": [
             "Compra **la Reina** en El Manto con los 4 de Saber.",
-            "Con la Reina metes hasta 3 cartas de tu descarte o de la Pila Perdida en los Consejos. Suma tu acción de gobernar: 5-7 cartas en los Consejos.",
-            "Cobra los beneficios de los Consejos (por ejemplo, la acción de Secretos).",
+            "Al comprarla, gobierna gratis con hasta **3 cartas** de tu Pila Perdida o tu descarte, **una en cada Consejo**. Como es gobernar, cada carta necesita al menos un voto. Funciona aunque tengas la mano llena (entonces la Reina va encima del mazo).",
+            "Haz tu acción normal de gobernar desde la mano. Con las de las rondas 1-2, tendrás unas 5-7 cartas en los Consejos.",
+            "Activa los Consejos: **Secretos** pone tantos marcadores como votos tengas allí y con 4 en una localización cobras su recompensa; **Juramentos** te devuelve simpatizantes para la fortaleza final.",
             "Activa el **Juicio de Brujas**: echas a los rivales de un Consejo y devuelves tus cartas de los Consejos al mazo, +1 de Saber por cada una.",
-            "Gasta ese Saber al momento: primero **Banco Real** (ingresos fijos); después Virrey o Muro Dorado."
+            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): primero **Banco Real** (ingresos fijos); después Virrey o Muro Dorado."
           ],
           "ordered": true,
-          "check": true
+          "check": false
         },
         {
           "when": "Rondas 4-5",
           "goal": "Fortaleza en el Campo de Batalla",
           "do": [
             "Es la región que más Influencia da y deja a los rivales sin llegar al Campo de Cosecha, así que no te quitan el Favor.",
-            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, una máquina de guerra desplegada con **Ley Marcial** y tu Heredero invulnerable con la **Guardia Real**.",
+            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, una máquina de guerra desplegada con **Ley Marcial** y tus Herederos invulnerables con la **Guardia Real**: tu Heredero inicial y la Reina, que también es Heredero (fuerza 10).",
             "Son unos 28 de fuerza que Letal no puede tocar: Letal elimina cartas, nunca simpatizantes."
           ]
         }
       ],
       "keys": [
+        {
+          "title": "La Reina, hace mucho tiempo",
+          "when": "El Manto · 4 de Saber",
+          "text": "Fuerza 10, Heredero, 1 voto y 1 de Saber. Es **Rastreador** (si viajas con ella vuelve al descarte) y **Resistente** (si la eliminan va al descarte). Al comprarla, gobierna con hasta 3 cartas de la Pila Perdida o el descarte, una por Consejo. Tiene Reagrupar (ella misma) en otoño."
+        },
         {
           "title": "Escuela de las Piedras",
           "when": "Primavera · 1 uso",
@@ -77,7 +84,7 @@
         {
           "title": "Guardia Real (Favor)",
           "when": "Primavera · 3 usos",
-          "text": "Por defecto, +1 de Influencia. Si un rival tiene cartas con Letal, haz invulnerable a tu Heredero. El Favor también desempata al final."
+          "text": "Por defecto, +1 de Influencia. Si un rival tiene cartas con Letal, haz invulnerables a tus Herederos esa ronda: afecta a todas tus cartas Heredero, también a la Reina. El Favor también desempata al final."
         }
       ],
       "cards": {
@@ -90,12 +97,13 @@
       },
       "warnings": [
         "Viajar manda la carta a la Pila Perdida para siempre, salvo que tenga el rasgo **Rastreador**: esa vuelve al descarte y puede viajar más veces.",
+        "Las cartas metidas con la Reina o al gobernar necesitan votos. Solo las habilidades que dicen «mueve a un Consejo» (sin gobernar) admiten cartas sin votos.",
         "Contra flanqueos, guarda en la mano una Treta, un Heredero y un Agente para poder meter Letal en el choque.",
         "Ir último en el orden de turno te deja colocar los marcadores de choque y decidir en qué orden se resuelven las regiones.",
         "Si vas empatado al final, gana el Campo de Cosecha en las últimas rondas: el Favor del Reino deshace el empate.",
         "No termines con tácticas sin usar: es ventaja perdida."
       ],
-      "pending": "La Reina, su efecto y los nombres de las cartas de El Manto salen de un resumen automático del vídeo. Falta comprobar también qué carta básica es la de arquetipo Comerciante y cuánto Saber da.",
+      "pending": "Faltan las otras cartas de El Manto: Banco Real, Virrey y Muro Dorado (nombres, costes y efectos salen del resumen del vídeo). Y qué carta básica es la de arquetipo Comerciante y cuánto Saber da.",
       "sources": [
         {
           "title": "Guía de la Nobleza de Jaffles (playtester), vídeo",
