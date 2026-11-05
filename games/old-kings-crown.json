@@ -25,7 +25,7 @@
           "goal": "Prepararse",
           "do": [
             "Gobierna una carta **cada otoño**, sobre todo en **Secretos**: es el Consejo que mejor te da recompensas sin ganar choques.",
-            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes. Viaja con el **Comerciante** (2 de Saber) y con el **Capitán** o la **Caballería**, que son Rastreadores y vuelven al descarte. Si puedes, gana el **Páramo**: te deja viajar otra vez, incluso con la carta activa del choque.",
+            "Termina la ronda 2 con **3 de Saber guardados** y no los gastes: viaja con el **Comerciante** en la ronda 1 (2 de Saber) y con un **Capitán** o un **Seguidor** en la ronda 2 (1). Si ganas el **Páramo** (viaje extra, incluso con la carta activa del choque), vas sobrado.",
             "Juega el **Agente** de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival. Muere si hay un Seguidor rival activo en su choque.",
             "Así preparas el combo: el Comerciante (al viajar) y el Agente (al morir) acaban en la Pila Perdida y tienen **2 votos** cada uno, justo lo que la Reina recupera para los Consejos."
           ]
@@ -35,7 +35,7 @@
           "goal": "Combo «Precio Dorado»",
           "note": "Todo en el mismo paso de Acción de otoño, en este orden. El Juicio de Brujas tiene un solo uso: el combo se hace una vez por partida.",
           "do": [
-            "Compra **la Reina** en El Manto con los 4 de Saber.",
+            "**Viaja** con un Capitán o un Seguidor (+1 de Saber → 4) y, en ese momento, compra **la Reina** en El Manto. El Saber solo se puede gastar al ganarlo: por eso hay que viajar justo antes.",
             "Al comprarla, gobierna gratis con hasta **3 cartas** de tu Pila Perdida o tu descarte, **una en cada Consejo**. Como es gobernar, cada carta necesita al menos un voto. Funciona aunque tengas la mano llena (entonces la Reina va encima del mazo).",
             "Haz tu acción normal de gobernar desde la mano. Con las de las rondas 1-2, tendrás unas 5-7 cartas en los Consejos.",
             "Activa los Consejos: **Secretos** pone tantos marcadores como votos tengas allí y con 4 en una localización cobras su recompensa; **Juramentos** te devuelve simpatizantes para la fortaleza final.",
@@ -60,7 +60,7 @@
         {
           "title": "Orden de compra en El Manto",
           "when": "Cada vez que ganes Saber",
-          "text": "**Reina** (4) en el otoño de la ronda 3, para el Precio Dorado. Con el Saber del Juicio de Brujas, **Banco Real** (3) primero. Después, según la partida: **Alto Tribunal** (3) si vas a por los Consejos, **Muro Dorado** (2) para la fortaleza o **Virrey** (2) si hay una carta de reino que robar. El resto, en los viajes siguientes."
+          "text": "**Reina** (4) en el otoño de la ronda 3, justo después de viajar: llega con 3 guardados y el viaje pone el cuarto. Con el Saber del Juicio de Brujas, **Banco Real** (3) primero. Después, según la partida: **Alto Tribunal** (3) si vas a por los Consejos, **Muro Dorado** (2) para la fortaleza o **Virrey** (2) si hay una carta de reino que robar. El resto, en los viajes siguientes."
         },
         {
           "title": "Contra flanqueos",
