@@ -57,7 +57,7 @@ let html = fs.readFileSync(idx, 'utf8')
   .replace(/<!doctype html>[\s\S]*?<head>\n/, '')
   .replace(/<link rel="(manifest|icon|apple-touch-icon)"[^>]*>\n/g, '')
   .replace(/<\/head>\n<body>\n/, '').replace(/<\/body>\n<\/html>\n?$/, '')
-  .replace('<script>window.__GAMES__ = null;</script>', `<script>window.__GAMES__ = ${JSON.stringify(inline)};</script>`)
+  .replace('<script>window.__GAMES__ = null;</script>', `<script>window.__GAMES__ = ${JSON.stringify(inline)}; window.__APP_VERSION__ = ${JSON.stringify(appVersion)};</script>`)
   .replace('<script src="app.js"></script>', () => `<script>\n${fs.readFileSync(path.join(OUT, 'app.js'), 'utf8')}</script>`);
 fs.mkdirSync(PREVIEW, { recursive: true });
 fs.writeFileSync(path.join(PREVIEW, 'jugada-maestra.html'), html);

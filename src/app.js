@@ -37,6 +37,10 @@ function cover(g) {
     : el('span', { class: 'cover mono', 'aria-hidden': 'true' }, strip(g.name)[0]);
 }
 
+// La misma versión en la app y en la copia para PC: así se ve de un vistazo si van a la par.
+const VERSION = [window.__APP_VERSION__, document.documentElement.dataset.version]
+  .find(v => v && !v.startsWith('__')) || '';
+
 function renderList() {
   document.title = 'Jugada Maestra';
   const n = GAMES.reduce((a, g) => a + g.plans.length, 0);
@@ -51,7 +55,8 @@ function renderList() {
       el('span', { class: 'meta' }, g.plans.map(p => p.title).join(' · ')),
       el('span', { class: 'count' }, g.plans.length === 1 ? '1 plan' : `${g.plans.length} planes`)
     ]))),
-    el('p', { class: 'empty' }, 'Para añadir una estrategia, pídesela a Claude en el proyecto «Juegos de mesa» con la fuente (vídeo, guía o lo que hayáis descubierto jugando).')
+    el('p', { class: 'empty' }, 'Para añadir una estrategia, pídesela a Claude en el proyecto «Juegos de mesa» con la fuente (vídeo, guía o lo que hayáis descubierto jugando).'),
+    VERSION ? el('p', { class: 'stamp' }, `Versión ${VERSION}`) : null
   );
   scrollTo(0, 0);
 }
