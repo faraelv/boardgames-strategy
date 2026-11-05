@@ -107,6 +107,7 @@
             "tag": "Imprescindible"
           },
           {
+            "image": "cards/curiousRing.webp",
             "name": "Anillo Curioso",
             "original": "Curious Ring",
             "tag": "Imprescindible",
@@ -116,6 +117,7 @@
             "why": "Te da un **segundo Juicio de Brujas**, es decir, un segundo Precio Dorado, o una segunda **Escuela de las Piedras**. Según las aclaraciones oficiales, puedes reactivar una táctica que hayas usado esa misma ronda."
           },
           {
+            "image": "cards/splendidGuard.webp",
             "name": "Guardia Espléndida",
             "original": "Splendid Guard",
             "tag": "Imprescindible",
@@ -125,6 +127,7 @@
             "why": "La Nobleza tiene el mejor Favor del juego: **Guardia Real** siempre disponible, o dos veces por ronda (Influencia y Herederos invulnerables a la vez)."
           },
           {
+            "image": "cards/monumentBuilders.webp",
             "name": "Constructores de Monumentos",
             "original": "Monument Builders",
             "tag": "Muy buena",
@@ -134,6 +137,7 @@
             "why": "La Reina pone una carta en cada Consejo: justo lo que pide para el bonus de 2."
           },
           {
+            "image": "cards/oldKingsSignet.webp",
             "name": "Sello del Viejo Rey",
             "original": "Old King's Signet",
             "tag": "Muy buena",
@@ -154,6 +158,7 @@
             "tag": "Útil"
           },
           {
+            "image": "cards/oldKingsShield.webp",
             "name": "Escudo del Viejo Rey",
             "original": "Old King's Shield",
             "tag": "Útil",
@@ -173,6 +178,7 @@
             "tag": "Útil"
           },
           {
+            "image": "cards/musteringBanner.webp",
             "name": "Estandarte de Reclutamiento",
             "original": "Mustering Banner",
             "tag": "Útil",
@@ -182,6 +188,7 @@
             "why": "Te asegura los 5 simpatizantes para la Escuela de las Piedras sin depender del Consejo de Juramentos."
           },
           {
+            "image": "cards/adventuringParty.webp",
             "name": "Grupo de Aventureros",
             "original": "Adventuring Party",
             "tag": "Útil",
@@ -191,6 +198,7 @@
             "why": "Viajas sin perder cartas: llegas a los 4 de Saber de la Reina sin vaciar el mazo."
           },
           {
+            "image": "cards/glitteringCaves.webp",
             "name": "Cuevas Relucientes",
             "original": "Glittering Caves",
             "tag": "Útil",
@@ -211,6 +219,7 @@
             "tag": "Para la Ley Marcial"
           },
           {
+            "image": "cards/siegeCommander.webp",
             "name": "Comandante de Asedio",
             "original": "Siege Commander",
             "tag": "Para la Ley Marcial",
@@ -220,6 +229,7 @@
             "why": "Con Despliegue, tu Heredero se queda activo en la región de la fortaleza de una ronda a otra. Con el Taller de Ingenieros también se despliega en primavera."
           },
           {
+            "image": "cards/countrysideReservists.webp",
             "name": "Reservistas del Campo",
             "original": "Countryside Reservists",
             "tag": "Para la Ley Marcial",
@@ -231,7 +241,7 @@
           }
         ],
         "after": [
-          "Ordenadas de más a menos importante. Las que no tienen imagen aún no las hemos fotografiado."
+          "Ordenadas de más a menos importante."
         ]
       },
       "warnings": [
