@@ -8,7 +8,7 @@ PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego
 
 - Misma estructura que Ronda Cero: un JSON por juego en `games/`, app en `src/`, `scripts/build.mjs` construye `dist/`.
 - Funciona sin conexión, aviso de «Actualizar», pantalla siempre encendida, botón atrás de Android (navegación por `#juego`, `#juego-plan` o `#juego-plan-pestaña`).
-- Cada plan va en pestañas: **Resumen** (idea, puntos fuertes y débiles, «Ojo», por verificar y fuentes), **Rondas** (`phases`), **Tácticas** o **Claves** (`keys`) y **Cartas** (`cards`). Solo salen las que tienen contenido.
+- Cada plan va en pestañas: **Resumen** (idea, puntos fuertes y débiles, «Ojo», por verificar y fuentes), **Rondas** (`phases`), **Tácticas** (`tactics`: solo losetas de táctica y habilidad de facción), **Claves** (`keys`: el resto de consejos) y **Cartas** (`cards`). Solo salen las que tienen contenido.
 - `npm run check` valida los juegos; `npm run build` genera `dist/` y una vista previa de un solo fichero en `dist-preview/`.
 
 ## Cada actualización (obligatorio)
@@ -30,7 +30,8 @@ PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego
 - `id`, `title`, `kind` (Facción, General…), `thesis` (la idea en una o dos frases), `style` opcional.
 - `strengths` / `weaknesses`: listas.
 - `phases`: `{ when, goal, do: [], ordered?, note?, check? }` → línea de tiempo «Ronda a ronda».
-- `keys`: `{ title, when, text }` → «Cuándo usar cada táctica» (o «Claves» si no hay fases).
+- `tactics`: `{ title, when, text }` → pestaña Tácticas (solo las tácticas de la facción y su Favor).
+- `keys`: `{ title, when, text }` → pestaña Claves (consejos, combos, orden de compra…).
 - `site` (opcional): mismo formato que `cards`, para las cartas de la sede de la facción; sale antes que `cards` en la pestaña Cartas.
 - `cards`: `{ title, items, after? }`; cada item es texto o una carta `{ image, name, original, text: [], why }` (imagen en `src/cards/`, recortada sin el texto en inglés), `warnings`: lista «Ojo», `pending`: aviso «Por verificar».
 - `sources`: `{ title, url? }`.

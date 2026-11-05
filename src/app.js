@@ -67,7 +67,8 @@ function tabsOf(plan) {
   return [
     ['resumen', 'Resumen', true],
     ['rondas', 'Rondas', !!plan.phases],
-    ['tacticas', plan.phases ? 'Tácticas' : 'Claves', !!plan.keys],
+    ['tacticas', 'Tácticas', !!plan.tactics],
+    ['claves', 'Claves', !!plan.keys],
     ['cartas', 'Cartas', !!(plan.cards || plan.site)]
   ].filter(t => t[2]);
 }
@@ -88,7 +89,7 @@ function renderGame(g, plan, tab) {
   if (tabs.length > 1) parts.push(el('div', { class: 'tabs', role: 'tablist' }, tabs.map(([id, label]) =>
     el('button', { type: 'button', role: 'tab', 'aria-selected': String(id === tab), onclick: () => { if (id !== tab) go(plan, id); } }, label))));
 
-  const view = ({ resumen, rondas, tacticas, cartas })[tab];
+  const view = ({ resumen, rondas, tacticas, claves, cartas })[tab];
   parts.push(...view(plan).filter(Boolean));
   app.replaceChildren(...parts);
   scrollTo(0, 0);
@@ -130,9 +131,13 @@ function rondas(plan) {
   ])];
 }
 
-function tacticas(plan) {
+// Tácticas: solo las losetas de táctica y la habilidad de facción. Claves: el resto de consejos.
+const tacticas = plan => fichas(plan.tactics);
+const claves = plan => fichas(plan.keys);
+
+function fichas(list) {
   return [el('section', { class: 'sec' }, [
-    el('div', { class: 'keys' }, plan.keys.map(k => el('div', { class: 'key' }, [
+    el('div', { class: 'keys' }, list.map(k => el('div', { class: 'key' }, [
       el('div', { class: 'head' }, [el('h3', {}, k.title), k.when ? el('span', { class: 'chip' }, k.when) : null]),
       R('p', k.text)
     ])))

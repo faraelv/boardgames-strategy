@@ -21,7 +21,7 @@ const games = files.map(f => {
     if (!/^[a-z0-9]+$/i.test(p.id) || ids.has(p.id)) fail(`${f}: id de plan no válido o repetido (${p.id})`);
     ids.add(p.id);
     for (const ph of p.phases || []) if (!ph.when || !ph.goal || !Array.isArray(ph.do)) fail(`${f}/${p.id}: fase incompleta`);
-    for (const k of p.keys || []) if (!k.title || !k.text) fail(`${f}/${p.id}: táctica incompleta`);
+    for (const k of [...(p.keys || []), ...(p.tactics || [])]) if (!k.title || !k.text) fail(`${f}/${p.id}: ficha incompleta`);
   }
   return g;
 }).sort((a, b) => strip(a.name).localeCompare(strip(b.name), 'es'));

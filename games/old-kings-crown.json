@@ -63,34 +63,9 @@
           "text": "**Reina** (4) en el otoño de la ronda 3, para el Precio Dorado. Con el Saber del Juicio de Brujas, **Banco Real** (3) primero. Después, según la partida: **Alto Tribunal** (3) si vas a por los Consejos, **Muro Dorado** (2) para la fortaleza o **Virrey** (2) si hay una carta de reino que robar. El resto, en los viajes siguientes."
         },
         {
-          "title": "Tu mazo básico",
-          "when": "14 cartas, igual en todas las facciones",
-          "text": "**Heredero**: la más fuerte, Resistente y Reagrupar. **Comerciante**: fuerza 0, 2 votos y 2 de Saber, Reagrupar a dos cartas. **Agente**: Letal y 2 votos, pero muere ante Seguidores rivales. **Capitán**: 1 voto, 1 Saber y Rastreador. **Caballería**: Flanqueo y Rastreador. **Máquina de guerra**: fuerza 5, Invulnerable y Despliegue. **Treta**: fuerza 0, Invulnerable, Emboscada y Retirada. **Seguidores**: Invulnerables y 1 de Saber."
-        },
-        {
-          "title": "Escuela de las Piedras",
-          "when": "Primavera · 1 uso",
-          "text": "Esa ronda cada simpatizante suma +2 y en ese invierno no se pierden. Guárdala para la fortaleza final, cuando tengas los 5 disponibles."
-        },
-        {
-          "title": "Ley Marcial",
-          "when": "Primavera · 2 usos",
-          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu mazo básico (fuerza 5) o, mejor, el **Muro Dorado**, que se queda desplegado ronda tras ronda. El Taller de Ingenieros también deja desplegar en primavera."
-        },
-        {
           "title": "Contra flanqueos",
           "when": "Si no tienes Ley Marcial",
           "text": "Pon la **Treta** en la región que defiendes y guarda el **Agente** en la mano. Si un rival flanquea hacia allí, en el Día de ese choque usa la **Emboscada** de la Treta para meter el Agente bocabajo: por la noche su **Letal** elimina las cartas rivales sin protección. Si hay un **Seguidor** rival, no metas el Agente (moriría): mete una carta fuerte. Con el Gremio de Asesinos, el Heredero también sirve."
-        },
-        {
-          "title": "Juicio de Brujas",
-          "when": "Otoño · 1 uso",
-          "text": "Pieza central del Precio Dorado. Elige el Consejo con más cartas rivales. Mover tus propias cartas al mazo es opcional: da Saber y retrasa el Desgaste."
-        },
-        {
-          "title": "Sello Real",
-          "when": "Al resolver pujas · 1 uso",
-          "text": "Las pujas rivales valen 0 esa ronda: resuelves primero y **nadie puede robarte** cartas de reino. Úsalo para coger la mejor carta del Gran Camino pujando con una carta floja (guardas las fuertes) o para proteger tus cartas de reino la ronda en que te las vayan a robar. No lo gastes con el Virrey: él ya roba solo."
         },
         {
           "title": "Virrey",
@@ -98,9 +73,9 @@
           "text": "Puja con él para **robar**: la carta que defiende cuenta como fuerza 0, así que el robo sale siempre. Después se queda ocupando la carta robada con fuerza 11 y Resistente: para recuperarla, el rival necesita pujar con 12 o más."
         },
         {
-          "title": "Guardia Real (Favor)",
-          "when": "Primavera · 3 usos",
-          "text": "Por defecto, +1 de Influencia. Si un rival tiene cartas con Letal, haz invulnerables a tus Herederos esa ronda: afecta a todas tus cartas Heredero, también a la Reina. El Favor también desempata al final."
+          "title": "Tu mazo básico",
+          "when": "14 cartas, igual en todas las facciones",
+          "text": "**Heredero**: la más fuerte, Resistente y Reagrupar. **Comerciante**: fuerza 0, 2 votos y 2 de Saber, Reagrupar a dos cartas. **Agente**: Letal y 2 votos, pero muere ante Seguidores rivales. **Capitán**: 1 voto, 1 Saber y Rastreador. **Caballería**: Flanqueo y Rastreador. **Máquina de guerra**: fuerza 5, Invulnerable y Despliegue. **Treta**: fuerza 0, Invulnerable, Emboscada y Retirada. **Seguidores**: Invulnerables y 1 de Saber."
         }
       ],
       "cards": {
@@ -280,6 +255,33 @@
         },
         {
           "title": "Reglamento de La corona del viejo rey (inglés)"
+        }
+      ],
+      "tactics": [
+        {
+          "title": "Escuela de las Piedras",
+          "when": "Primavera · 1 uso",
+          "text": "Esa ronda cada simpatizante suma +2 y en ese invierno no se pierden. Guárdala para la fortaleza final, cuando tengas los 5 disponibles."
+        },
+        {
+          "title": "Ley Marcial",
+          "when": "Primavera · 2 usos",
+          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu mazo básico (fuerza 5) o, mejor, el **Muro Dorado**, que se queda desplegado ronda tras ronda. El Taller de Ingenieros también deja desplegar en primavera."
+        },
+        {
+          "title": "Juicio de Brujas",
+          "when": "Otoño · 1 uso",
+          "text": "Pieza central del Precio Dorado. Elige el Consejo con más cartas rivales. Mover tus propias cartas al mazo es opcional: da Saber y retrasa el Desgaste."
+        },
+        {
+          "title": "Sello Real",
+          "when": "Al resolver pujas · 1 uso",
+          "text": "Las pujas rivales valen 0 esa ronda: resuelves primero y **nadie puede robarte** cartas de reino. Úsalo para coger la mejor carta del Gran Camino pujando con una carta floja (guardas las fuertes) o para proteger tus cartas de reino la ronda en que te las vayan a robar. No lo gastes con el Virrey: él ya roba solo."
+        },
+        {
+          "title": "Guardia Real (Favor)",
+          "when": "Primavera · 3 usos",
+          "text": "Por defecto, +1 de Influencia. Si un rival tiene cartas con Letal, haz invulnerables a tus Herederos esa ronda: afecta a todas tus cartas Heredero, también a la Reina. El Favor también desempata al final."
         }
       ]
     },
