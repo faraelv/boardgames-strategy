@@ -96,17 +96,6 @@
         "title": "Cartas de reino que te convienen",
         "items": [
           {
-            "image": "cards/assassinsGuild.webp",
-            "name": "Gremio de Asesinos",
-            "original": "Assassins' Guild",
-            "text": [
-              "Tus Herederos ganan **Letal** (Noche) y **Retirada** (Día). Cuando tu Heredero elimina una o más cartas, ganas **1 de Influencia**.",
-              "**Noche:** si hay algún simpatizante rival activo en un choque con tu Heredero, elimina a tu Heredero."
-            ],
-            "why": "La pega se anula con la **Guardia Real**: tus Herederos invulnerables no pueden ser eliminados. Con la Reina tienes dos Herederos letales.",
-            "tag": "Imprescindible"
-          },
-          {
             "image": "cards/curiousRing.webp",
             "name": "Anillo Curioso",
             "original": "Curious Ring",
@@ -125,6 +114,17 @@
               "Puedes activar el Favor del Reino de tu facción **aunque no lo tengas**. Si lo tienes, puedes activarlo **dos veces** (cada vez es una acción distinta)."
             ],
             "why": "La Nobleza tiene el mejor Favor del juego: **Guardia Real** siempre disponible, o dos veces por ronda (Influencia y Herederos invulnerables a la vez)."
+          },
+          {
+            "image": "cards/assassinsGuild.webp",
+            "name": "Gremio de Asesinos",
+            "original": "Assassins' Guild",
+            "text": [
+              "Tus Herederos ganan **Letal** (Noche) y **Retirada** (Día). Cuando tu Heredero elimina una o más cartas, ganas **1 de Influencia**.",
+              "**Noche:** si hay algún **Seguidor** rival activo en un choque con tu Heredero, elimina a tu Heredero."
+            ],
+            "why": "Tus Herederos, los más fuertes del mazo, pasan a ser letales y a dar Influencia. Pero los Seguidores abundan y son Invulnerables: tu Letal no los mata y la pega salta. Úsala solo en rondas en que puedas proteger al Heredero (**Guardia Real**, Escudo del Viejo Rey o Guardia Espléndida). Con la Reina tienes dos Herederos letales.",
+            "tag": "Muy buena, con protección"
           },
           {
             "image": "cards/monumentBuilders.webp",
@@ -172,9 +172,9 @@
             "name": "Coronas de Lata",
             "original": "Tin Crowns",
             "text": [
-              "Si vas **primero** en el orden de turno, tus simpatizantes ganan **+1 voto**. Si **no** vas primero, ganan **+2 votos**."
+              "Si vas **primero** en el orden de turno, tus **Seguidores** ganan **+1 voto**. Si **no** vas primero, ganan **+2 votos**."
             ],
-            "why": "Más votos sin gastar cartas. Rinde más si no vas primero, que es lo habitual cuando juegas a no ser agresivo en las primeras rondas.",
+            "why": "Tus Seguidores pasan a servir para gobernar y suman votos en Secretos y Juramentos. Rinde más si no vas primero, lo habitual cuando juegas a no ser agresivo al principio.",
             "tag": "Útil"
           },
           {
