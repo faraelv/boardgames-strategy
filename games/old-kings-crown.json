@@ -90,9 +90,47 @@
       "cards": {
         "title": "Cartas de reino que te convienen",
         "items": [
-          "**Gremio de Asesinos** o **Lanza del Viejo Rey**: con la Guardia Real, Heredero invulnerable y letal.",
-          "**Coronas de Lata**: más votos.",
-          "**Taller de Ingenieros**, **Corceles Reales** y **Sabuesos de Guerra**: redesplegar máquinas de guerra."
+          {
+            "image": "cards/assassinsGuild.webp",
+            "name": "Gremio de Asesinos",
+            "original": "Assassins' Guild",
+            "text": [
+              "Tus Herederos ganan **Letal** y **Retirada** (Día). Cuando tu Heredero elimina una o más cartas, ganas **1 de Influencia**.",
+              "**Noche:** si hay algún simpatizante rival activo en un choque con tu Heredero, elimina a tu Heredero."
+            ],
+            "why": "La pega se anula con la **Guardia Real**: tus Herederos invulnerables no pueden ser eliminados. Con la Reina tienes dos Herederos letales."
+          },
+          {
+            "image": "cards/oldKingsSpear.webp",
+            "name": "Lanza del Viejo Rey",
+            "original": "Old King's Spear",
+            "text": [
+              "**Día:** elige una de tus cartas activas en el choque actual. Gana **Letal** hasta el final del choque. Descarta esta carta y la carta que la ocupa."
+            ],
+            "why": "Es de **un solo uso**. Guárdala para el choque decisivo, por ejemplo para romper a quien intente flanquear tu fortaleza."
+          },
+          {
+            "image": "cards/tinCrowns.webp",
+            "name": "Coronas de Lata",
+            "original": "Tin Crowns",
+            "text": [
+              "Si vas **primero** en el orden de turno, tus simpatizantes ganan **+1 voto**. Si **no** vas primero, ganan **+2 votos**."
+            ],
+            "why": "Más votos sin gastar cartas. Rinde más si no vas primero, que es lo habitual cuando juegas a no ser agresivo en las primeras rondas."
+          },
+          {
+            "image": "cards/engineersWorkshop.webp",
+            "name": "Taller de Ingenieros",
+            "original": "Engineers' Workshop",
+            "text": [
+              "Tus cartas con **Despliegue (1)** de otoño ganan también **Despliegue (1)** de primavera.",
+              "**Otoño:** pon **1 de Influencia** en una de tus cartas activas con Despliegue."
+            ],
+            "why": "La Influencia extra mantiene tu máquina de guerra un invierno más en el mapa, que es lo que necesita la **Ley Marcial**. El Despliegue de primavera te da otra forma de tenerla activa."
+          }
+        ],
+        "after": [
+          "Hay otras dos cartas de reino que, según la guía, sirven para **volver a desplegar máquinas de guerra**. No sabemos aún su nombre."
         ]
       },
       "warnings": [

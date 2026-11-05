@@ -130,6 +130,19 @@ section.sec > h2 { font-size: 16px; font-weight: 500; }
 .note.muted { background: var(--bg); color: var(--muted); }
 .flag { font-size: 12px; font-weight: 700; color: var(--bad); background: var(--bad-soft); border-radius: 999px; padding: 1px 8px; margin-left: 6px; white-space: nowrap; vertical-align: 2px; font-family: var(--body); }
 
+/* Cartas de reino: la ilustración original y, debajo, el panel oscuro con borde dorado de la carta,
+   con el texto traducido. El panel imita la carta física, así que tiene los mismos colores en los dos temas. */
+:root { --card-panel: #1e2a30; --card-gold: #c9a94a; --card-ink: #eef1ee; }
+.kcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.kcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; align-content: start; min-width: 0; }
+.kcard img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
+.kcard .panel { background: var(--card-panel); color: var(--card-ink); border-top: 2px solid var(--card-gold); padding: 12px 14px; display: grid; gap: 6px; }
+.kcard .panel h3 { font-size: 15px; font-weight: 500; color: var(--card-gold); text-transform: uppercase; letter-spacing: .04em; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+.kcard .panel h3 small { font-family: var(--body); font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--card-ink); opacity: .6; }
+.kcard .panel p { font-size: 15px; line-height: 1.45; }
+.kcard .panel b { color: #fff; }
+.kcard .why { padding: 10px 14px 12px; font-size: 15px; }
+
 .stamp { margin-top: 28px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sources { margin-top: 32px; font-size: 13px; color: var(--muted); display: grid; gap: 4px; }
 .sources a { color: inherit; }

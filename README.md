@@ -30,7 +30,7 @@ PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego
 - `strengths` / `weaknesses`: listas.
 - `phases`: `{ when, goal, do: [], ordered?, note?, check? }` → línea de tiempo «Ronda a ronda».
 - `keys`: `{ title, when, text }` → «Cuándo usar cada táctica» (o «Claves» si no hay fases).
-- `cards`: `{ title, items }`, `warnings`: lista «Ojo», `pending`: aviso «Por verificar».
+- `cards`: `{ title, items, after? }`; cada item es texto o una carta `{ image, name, original, text: [], why }` (imagen en `src/cards/`, recortada sin el texto en inglés), `warnings`: lista «Ojo», `pending`: aviso «Por verificar».
 - `sources`: `{ title, url? }`.
 - Textos en español, con palabras propias y sin nombres originales en inglés. `**negrita**` admitida.
 

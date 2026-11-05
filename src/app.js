@@ -104,7 +104,19 @@ function renderGame(g, plan) {
   ]));
 
   if (plan.cards) parts.push(el('section', { class: 'sec' }, [
-    el('h2', {}, plan.cards.title), el('ul', { class: 'plain' }, plan.cards.items.map(t => R('li', t)))
+    el('h2', {}, plan.cards.title),
+    // Cartas con imagen: ilustración original arriba y el texto de la carta traducido en el panel de abajo.
+    plan.cards.items.some(c => typeof c === 'object')
+      ? el('div', { class: 'kcards' }, plan.cards.items.map(c => typeof c === 'string' ? R('p', c) : el('article', { class: 'kcard' }, [
+          c.image ? el('img', { src: c.image, alt: '', loading: 'lazy' }) : null,
+          el('div', { class: 'panel' }, [
+            el('h3', {}, [c.name, c.original ? el('small', {}, c.original) : null]),
+            ...c.text.map(t => R('p', t))
+          ]),
+          c.why ? R('p', c.why, { class: 'why' }) : null
+        ])))
+      : el('ul', { class: 'plain' }, plan.cards.items.map(t => R('li', t))),
+    ...(plan.cards.after || []).map(t => R('p', t, { class: 'note muted' }))
   ]));
 
   if (plan.warnings) parts.push(el('section', { class: 'sec' }, [

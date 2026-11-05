@@ -51,8 +51,12 @@ fs.writeFileSync(swPath, fs.readFileSync(swPath, 'utf8')
   .replace('__VERSION__', version).replace('__SHELL__', JSON.stringify(['./', ...shell.map(f => './' + f)])));
 
 // Vista previa en un solo fichero: datos y portadas incrustados, sin service worker.
-const inline = games.map(g => g.cover
-  ? { ...g, cover: 'data:image/webp;base64,' + fs.readFileSync(path.join(OUT, g.cover)).toString('base64') } : g);
+const data = f => 'data:image/webp;base64,' + fs.readFileSync(path.join(OUT, f)).toString('base64');
+const inline = games.map(g => ({
+  ...(g.cover ? { ...g, cover: data(g.cover) } : g),
+  plans: g.plans.map(p => !p.cards ? p : { ...p, cards: { ...p.cards,
+    items: p.cards.items.map(c => c && c.image ? { ...c, image: data(c.image) } : c) } })
+}));
 let html = fs.readFileSync(idx, 'utf8')
   .replace(/<!doctype html>[\s\S]*?<head>\n/, '')
   .replace(/<link rel="(manifest|icon|apple-touch-icon)"[^>]*>\n/g, '')
