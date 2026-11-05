@@ -54,8 +54,12 @@ fs.writeFileSync(swPath, fs.readFileSync(swPath, 'utf8')
 const data = f => 'data:image/webp;base64,' + fs.readFileSync(path.join(OUT, f)).toString('base64');
 const inline = games.map(g => ({
   ...(g.cover ? { ...g, cover: data(g.cover) } : g),
-  plans: g.plans.map(p => !p.cards ? p : { ...p, cards: { ...p.cards,
-    items: p.cards.items.map(c => c && c.image ? { ...c, image: data(c.image) } : c) } })
+  plans: g.plans.map(p => {
+    const q = { ...p };
+    for (const k of ['cards', 'site']) if (p[k]) q[k] = { ...p[k],
+      items: p[k].items.map(c => c && c.image ? { ...c, image: data(c.image) } : c) };
+    return q;
+  })
 }));
 let html = fs.readFileSync(idx, 'utf8')
   .replace(/<!doctype html>[\s\S]*?<head>\n/, '')

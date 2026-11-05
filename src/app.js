@@ -68,7 +68,7 @@ function tabsOf(plan) {
     ['resumen', 'Resumen', true],
     ['rondas', 'Rondas', !!plan.phases],
     ['tacticas', plan.phases ? 'Tácticas' : 'Claves', !!plan.keys],
-    ['cartas', 'Cartas', !!plan.cards]
+    ['cartas', 'Cartas', !!(plan.cards || plan.site)]
   ].filter(t => t[2]);
 }
 
@@ -139,9 +139,13 @@ function tacticas(plan) {
   ])];
 }
 
+// Pestaña Cartas: primero las de tu sede (si las hay) y después las cartas de reino.
 function cartas(plan) {
-  const c = plan.cards;
-  return [el('section', { class: 'sec' }, [
+  return [plan.site, plan.cards].filter(Boolean).map(cardBlock);
+}
+
+function cardBlock(c) {
+  return el('section', { class: 'sec' }, [
     el('h2', {}, c.title),
     // Cartas con imagen: ilustración original arriba y el texto de la carta traducido en el panel de abajo.
     c.items.some(x => typeof x === 'object')
@@ -155,7 +159,7 @@ function cartas(plan) {
         ])))
       : el('ul', { class: 'plain' }, c.items.map(t => R('li', t))),
     ...(c.after || []).map(t => R('p', t, { class: 'note muted' }))
-  ])];
+  ]);
 }
 
 document.getElementById('home').addEventListener('click', () => {

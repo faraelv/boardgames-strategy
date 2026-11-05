@@ -31,12 +31,13 @@ PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego
 - `strengths` / `weaknesses`: listas.
 - `phases`: `{ when, goal, do: [], ordered?, note?, check? }` → línea de tiempo «Ronda a ronda».
 - `keys`: `{ title, when, text }` → «Cuándo usar cada táctica» (o «Claves» si no hay fases).
+- `site` (opcional): mismo formato que `cards`, para las cartas de la sede de la facción; sale antes que `cards` en la pestaña Cartas.
 - `cards`: `{ title, items, after? }`; cada item es texto o una carta `{ image, name, original, text: [], why }` (imagen en `src/cards/`, recortada sin el texto en inglés), `warnings`: lista «Ojo», `pending`: aviso «Por verificar».
 - `sources`: `{ title, url? }`.
 - Textos en español, con palabras propias y sin nombres originales en inglés. `**negrita**` admitida.
 
 ## Contenido actual
-- La corona del viejo rey · Nobleza (guía de Jaffles + guías oficiales, Reina y cartas de reino verificadas), Claves comunes y Otras facciones (pistas). Pendiente: Virrey y costes de El Manto.
+- La corona del viejo rey · Nobleza (guía de Jaffles + guías oficiales; Reina, Banco Real, Virrey, Muro Dorado y cartas de reino verificadas), Claves comunes y Otras facciones (pistas). Pendiente: quinta carta de El Manto y dos cifras del vídeo.
 - Brass: Birmingham · Claves comunes, Hierro y cerveza (BRIC), Manufacturas y cerámica, Algodón. Pendiente: PV de las fundiciones.
 - SETI · Plan general (guía de SpiderForge) y Especies. Pendiente: detalles de Centaurianos y 'Oumuamua.
 - Five Tribes · Consejos sueltos (de dudas resueltas en partida).

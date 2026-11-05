@@ -40,7 +40,7 @@
             "Haz tu acción normal de gobernar desde la mano. Con las de las rondas 1-2, tendrás unas 5-7 cartas en los Consejos.",
             "Activa los Consejos: **Secretos** pone tantos marcadores como votos tengas allí y con 4 en una localización cobras su recompensa; **Juramentos** te devuelve simpatizantes para la fortaleza final.",
             "Activa el **Juicio de Brujas**: echas a los rivales de un Consejo y devuelves tus cartas de los Consejos al mazo, +1 de Saber por cada una.",
-            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): primero **Banco Real**, una carta de sede que te da ingresos cada ronda gracias a los Consejos; después el **Muro Dorado** (máquina de guerra defensiva para bloquear una región) o el Virrey."
+            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): **Banco Real** (3) primero, y después **Virrey** (2) o **Muro Dorado** (2). Con 7 de Saber te llevas los tres."
           ],
           "ordered": true,
           "check": false
@@ -50,17 +50,13 @@
           "goal": "Fortaleza en el Campo de Batalla",
           "do": [
             "Es la región que más Influencia da y deja a los rivales sin llegar al Campo de Cosecha, así que no te quitan el Favor.",
-            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, tu máquina de guerra (la básica o el Muro Dorado) desplegada y protegida con **Ley Marcial**, y tus Herederos invulnerables con la **Guardia Real**: tu Heredero inicial y la Reina, que también es Heredero (fuerza 10).",
+            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, el **Muro Dorado** y tu máquina de guerra básica desplegados y protegidos con **Ley Marcial**, y tus Herederos invulnerables con la **Guardia Real**: tu Heredero inicial y la Reina, que también es Heredero (fuerza 10).",
+            "El Muro Dorado se mantiene solo: cada otoño, con 2 o más simpatizantes en su región, gana 1 de Influencia y no se descarta en invierno. Despliégalo en la región de la fortaleza en cuanto lo compres.",
             "Son unos 28 de fuerza que Letal no puede tocar: Letal elimina cartas, nunca simpatizantes."
           ]
         }
       ],
       "keys": [
-        {
-          "title": "La Reina, hace mucho tiempo",
-          "when": "El Manto · 4 de Saber",
-          "text": "Fuerza 10, Heredero, 1 voto y 1 de Saber. Es **Rastreador** (si viajas con ella vuelve al descarte) y **Resistente** (si la eliminan va al descarte). Al comprarla, gobierna con hasta 3 cartas de la Pila Perdida o el descarte, una por Consejo. Tiene Reagrupar (ella misma) en otoño."
-        },
         {
           "title": "Tu mazo básico",
           "when": "14 cartas, igual en todas las facciones",
@@ -74,7 +70,7 @@
         {
           "title": "Ley Marcial",
           "when": "Primavera · 2 usos",
-          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu **mazo básico** sirve (fuerza 5, Invulnerable). Despliégala en el otoño anterior o, con el Taller de Ingenieros, en primavera."
+          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu mazo básico (fuerza 5) o, mejor, el **Muro Dorado**, que se queda desplegado ronda tras ronda. El Taller de Ingenieros también deja desplegar en primavera."
         },
         {
           "title": "Juicio de Brujas",
@@ -84,7 +80,7 @@
         {
           "title": "Sello Real",
           "when": "Al resolver pujas · 1 uso",
-          "text": "Las pujas rivales valen 0. Úsalo cuando salga una carta de reino que combine contigo. Puedes pujar con una carta floja, pero esa carta es la que luego defiende la carta de reino."
+          "text": "Las pujas rivales valen 0, así que resuelves primero. Combínalo con el **Virrey**: si pujas con él para robar, la carta que defiende cuenta como fuerza 0 y te llevas la carta de reino que quieras, aunque esté bien defendida."
         },
         {
           "title": "Guardia Real (Favor)",
@@ -255,7 +251,7 @@
         "Vigila el **Agente** de cada rival (descarte, Pila Perdida y Consejos). Mientras no sepas dónde está, no metas cartas frágiles sin protección.",
         "Cuidado con el Desgaste: el Santuario y la Necrópolis (Tierras Bajas) te devuelven cartas al mazo o a la mano. Las cartas avanzadas que compras van a la mano y también ayudan."
       ],
-      "pending": "Falta el Virrey (nombre, coste y efecto salen del resumen del vídeo) y los costes exactos del Banco Real y el Muro Dorado: con una foto de El Manto queda verificado. También vienen del vídeo, sin comprobar, dos cifras: que los choques dan 1-3 de Influencia al principio y hasta 8 al final, y los «unos 28 de fuerza» de la fortaleza.",
+      "pending": "Falta la quinta carta de El Manto. Y dos cifras del vídeo sin comprobar: que los choques dan 1-3 de Influencia al principio y hasta 8 al final, y los «unos 28 de fuerza» de la fortaleza.",
       "sources": [
         {
           "title": "Guía de la Nobleza de Jaffles (playtester), vídeo",
@@ -271,7 +267,59 @@
         {
           "title": "Reglamento de La corona del viejo rey (inglés)"
         }
-      ]
+      ],
+      "site": {
+        "title": "Tu sede: El Manto",
+        "items": [
+          {
+            "image": "cards/queenLongAgo.webp",
+            "name": "La Reina, hace mucho tiempo",
+            "original": "The Queen, Long Ago",
+            "tag": "4 de Saber · Ronda 3",
+            "text": [
+              "Fuerza 10 · Heredero · **Rastreador** y **Resistente** · 1 voto, 1 de Saber · Reagrupar (ella misma) en otoño.",
+              "Al conseguirla, gobierna con hasta tres de tus cartas de la Pila Perdida o del descarte, cada una en un Consejo distinto."
+            ],
+            "why": "El corazón del Precio Dorado. Cómprala con los 4 de Saber exactos en el otoño de la ronda 3."
+          },
+          {
+            "image": "cards/royalBank.webp",
+            "name": "Banco Real",
+            "original": "Royal Bank",
+            "tag": "3 de Saber · Tras el combo",
+            "text": [
+              "Carta de sede. Tus cartas de facción sin votos impresos ganan **+1 voto**.",
+              "**Otoño:** elige una: recupera un **Capitán** del descarte a la mano **o** gana 1 de Influencia. Si no vas primero en el orden de turno, puedes hacer las dos."
+            ],
+            "why": "Ingresos fijos cada ronda sin ganar choques. Además, las cartas que no tenían votos pasan a servir para gobernar, y para que la Reina las recupere."
+          },
+          {
+            "image": "cards/viceroy.webp",
+            "name": "El Virrey",
+            "original": "The Viceroy",
+            "tag": "2 de Saber",
+            "text": [
+              "Fuerza 11 · Campeón · **Resistente** · 2 votos.",
+              "Cuando usas esta carta para robar una carta de reino, la carta que la ocupa cuenta como si tuviera fuerza 0."
+            ],
+            "why": "Roba cualquier carta de reino a un rival. Con el **Sello Real**, resuelves primero y te llevas la que quieras. Sus 2 votos también lo hacen útil en los Consejos."
+          },
+          {
+            "image": "cards/gildedWall.webp",
+            "name": "Muro Dorado",
+            "original": "Gilded Wall",
+            "tag": "2 de Saber · Para la fortaleza",
+            "text": [
+              "Fuerza 3 · Máquina de guerra · **Invulnerable** · Despliegue (1).",
+              "**Otoño:** si tienes dos o más simpatizantes en la región de esta carta, pon 1 de Influencia sobre ella."
+            ],
+            "why": "Se queda desplegado indefinidamente mientras tengas 2 simpatizantes en su región: el ancla perfecta para la **Ley Marcial** y la fortaleza final."
+          }
+        ],
+        "after": [
+          "Falta la quinta carta de El Manto."
+        ]
+      }
     },
     {
       "id": "claves",
