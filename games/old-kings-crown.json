@@ -24,10 +24,10 @@
           "when": "Rondas 1-2",
           "goal": "Prepararse",
           "do": [
-            "Gobierna una carta **cada otoño**, sobre todo en **Secretos**.",
-            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes. Viaja en cada otoño con la carta que más Saber dé (la guía usa la de arquetipo **Comerciante**) y, si puedes, gana el **Páramo**: te deja viajar otra vez, incluso con la carta activa del choque.",
-            "Juega el Agente de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival.",
-            "Prepara el combo: cuando viajes o descartes, que sean cartas **con votos** (martillo). Desde la Pila Perdida o el descarte son las que la Reina podrá meter en los Consejos."
+            "Gobierna una carta **cada otoño**, sobre todo en **Secretos**: es el Consejo que mejor te da recompensas sin ganar choques.",
+            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes. Viaja con el **Comerciante** (2 de Saber) y con el **Capitán** o la **Caballería**, que son Rastreadores y vuelven al descarte. Si puedes, gana el **Páramo**: te deja viajar otra vez, incluso con la carta activa del choque.",
+            "Juega el **Agente** de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival. Muere si hay un Seguidor rival activo en su choque.",
+            "Así preparas el combo: el Comerciante (al viajar) y el Agente (al morir) acaban en la Pila Perdida y tienen **2 votos** cada uno, justo lo que la Reina recupera para los Consejos."
           ]
         },
         {
@@ -40,7 +40,7 @@
             "Haz tu acción normal de gobernar desde la mano. Con las de las rondas 1-2, tendrás unas 5-7 cartas en los Consejos.",
             "Activa los Consejos: **Secretos** pone tantos marcadores como votos tengas allí y con 4 en una localización cobras su recompensa; **Juramentos** te devuelve simpatizantes para la fortaleza final.",
             "Activa el **Juicio de Brujas**: echas a los rivales de un Consejo y devuelves tus cartas de los Consejos al mazo, +1 de Saber por cada una.",
-            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): primero **Banco Real** (ingresos fijos); después Virrey o Muro Dorado."
+            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): primero **Banco Real**, una carta de sede que te da ingresos cada ronda gracias a los Consejos; después el **Muro Dorado** (máquina de guerra defensiva para bloquear una región) o el Virrey."
           ],
           "ordered": true,
           "check": false
@@ -50,7 +50,7 @@
           "goal": "Fortaleza en el Campo de Batalla",
           "do": [
             "Es la región que más Influencia da y deja a los rivales sin llegar al Campo de Cosecha, así que no te quitan el Favor.",
-            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, una máquina de guerra desplegada con **Ley Marcial** y tus Herederos invulnerables con la **Guardia Real**: tu Heredero inicial y la Reina, que también es Heredero (fuerza 10).",
+            "Junta en esa región: 5 simpatizantes con **Escuela de las Piedras**, tu máquina de guerra (la básica o el Muro Dorado) desplegada y protegida con **Ley Marcial**, y tus Herederos invulnerables con la **Guardia Real**: tu Heredero inicial y la Reina, que también es Heredero (fuerza 10).",
             "Son unos 28 de fuerza que Letal no puede tocar: Letal elimina cartas, nunca simpatizantes."
           ]
         }
@@ -62,6 +62,11 @@
           "text": "Fuerza 10, Heredero, 1 voto y 1 de Saber. Es **Rastreador** (si viajas con ella vuelve al descarte) y **Resistente** (si la eliminan va al descarte). Al comprarla, gobierna con hasta 3 cartas de la Pila Perdida o el descarte, una por Consejo. Tiene Reagrupar (ella misma) en otoño."
         },
         {
+          "title": "Tu mazo básico",
+          "when": "14 cartas, igual en todas las facciones",
+          "text": "**Heredero**: la más fuerte, Resistente y Reagrupar. **Comerciante**: fuerza 0, 2 votos y 2 de Saber, Reagrupar a dos cartas. **Agente**: Letal y 2 votos, pero muere ante Seguidores rivales. **Capitán**: 1 voto, 1 Saber y Rastreador. **Caballería**: Flanqueo y Rastreador. **Máquina de guerra**: fuerza 5, Invulnerable y Despliegue. **Treta**: fuerza 0, Invulnerable, Emboscada y Retirada. **Seguidores**: Invulnerables y 1 de Saber."
+        },
+        {
           "title": "Escuela de las Piedras",
           "when": "Primavera · 1 uso",
           "text": "Esa ronda cada simpatizante suma +2 y en ese invierno no se pierden. Guárdala para la fortaleza final, cuando tengas los 5 disponibles."
@@ -69,7 +74,7 @@
         {
           "title": "Ley Marcial",
           "when": "Primavera · 2 usos",
-          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa: cómprala antes en El Manto y despliégala el otoño anterior."
+          "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu **mazo básico** sirve (fuerza 5, Invulnerable). Despliégala en el otoño anterior o, con el Taller de Ingenieros, en primavera."
         },
         {
           "title": "Juicio de Brujas",
@@ -235,9 +240,12 @@
         "Contra flanqueos, guarda en la mano una Treta, un Heredero y un Agente para poder meter Letal en el choque.",
         "Ir último en el orden de turno te deja colocar los marcadores de choque y decidir en qué orden se resuelven las regiones.",
         "Si vas empatado al final, gana el Campo de Cosecha en las últimas rondas: el Favor del Reino deshace el empate.",
-        "No termines con tácticas sin usar: es ventaja perdida."
+        "No termines con tácticas sin usar: es ventaja perdida.",
+        "Gana por poco: lo que sobra de fuerza en un choque es lo que te falta en otro.",
+        "Vigila el **Agente** de cada rival (descarte, Pila Perdida y Consejos). Mientras no sepas dónde está, no metas cartas frágiles sin protección.",
+        "Cuidado con el Desgaste: el Santuario y la Necrópolis (Tierras Bajas) te devuelven cartas al mazo o a la mano. Las cartas avanzadas que compras van a la mano y también ayudan."
       ],
-      "pending": "Faltan las otras cartas de El Manto: Banco Real, Virrey y Muro Dorado (nombres, costes y efectos salen del resumen del vídeo). Y qué carta básica es la de arquetipo Comerciante y cuánto Saber da.",
+      "pending": "Falta el Virrey (nombre, coste y efecto salen del resumen del vídeo) y los costes exactos del Banco Real y el Muro Dorado. Con una foto de El Manto queda todo verificado.",
       "sources": [
         {
           "title": "Guía de la Nobleza de Jaffles (playtester), vídeo",
@@ -248,7 +256,110 @@
           "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf"
         },
         {
+          "title": "Teaching Guide (Eerie Idol Games)"
+        },
+        {
           "title": "Reglamento de La corona del viejo rey (inglés)"
+        }
+      ]
+    },
+    {
+      "id": "claves",
+      "title": "Claves comunes",
+      "kind": "Cualquier facción",
+      "thesis": "Cuida tu economía de cartas, elige una región prioritaria cada ronda y saca partido también de los choques que pierdes.",
+      "style": "Consejos de la guía de estrategia oficial.",
+      "keys": [
+        {
+          "title": "Según el número de jugadores",
+          "when": "Antes de empezar",
+          "text": "**A 2**, la más agresiva: puedes intentar dejar al rival sin dos o tres regiones, y conviene robarle cartas de reino si le dan una combinación peligrosa. **A 3**, pacta con otro para frenar al líder; ir último te da ver a todos y elegir el orden de las regiones. **A 4**, protégete, deja que los demás se desgasten y prioriza Consejos, sede y cartas de reino de valor seguro antes que la Influencia."
+        },
+        {
+          "title": "Economía de cartas",
+          "when": "Toda la partida",
+          "text": "Cada vez que barajas el descarte pierdes una carta de mano (Desgaste). Para evitarlo: **Reagrupar** (usa una carta en el choque y recupérala para gobernar, viajar o la ronda siguiente), las Tierras Bajas (el Santuario devuelve las cartas usadas al mazo y la Necrópolis rescata cartas del descarte) y comprar cartas avanzadas, que van a la mano."
+        },
+        {
+          "title": "Una región prioritaria",
+          "when": "Primavera",
+          "text": "Ir a por las tres regiones es muy arriesgado. Elige la recompensa que más necesitas esa ronda y gana ahí, mejor por poco: la fuerza que sobra es la que te falta en otro sitio."
+        },
+        {
+          "title": "Perder con provecho",
+          "when": "Choques",
+          "text": "Si no vas a ganar: **flanquea** para reforzar otra región, **elimina** cartas rivales vulnerables o **retírate** con la Treta para salvar tus cartas y tu Heraldo."
+        },
+        {
+          "title": "Información visible",
+          "when": "Choques",
+          "text": "Los descartes y la Pila Perdida son públicos. Vigila dónde está el **Agente** de cada rival y usa la **Treta** para explorar: si la cosa pinta mal, te retiras."
+        },
+        {
+          "title": "Consejos",
+          "when": "Otoño",
+          "text": "**Reliquias** da mucha Influencia de golpe, pero depende de ganar donde está tu Heraldo. **Secretos** es el mejor para conseguir recompensas sin ganar choques. **Juramentos** mantiene tus simpatizantes en el mapa."
+        },
+        {
+          "title": "Invulnerable",
+          "when": "A 3-4 jugadores",
+          "text": "Hay más Letal en juego: las cartas Invulnerables hacen tu fuerza fiable. Tenlo en cuenta al comprar en tu sede."
+        },
+        {
+          "title": "Gasta tus tácticas",
+          "when": "Toda la partida",
+          "text": "Terminar con tácticas sin usar es ventaja perdida. Algunas tienen varios usos: no tengas miedo de gastarlas."
+        }
+      ],
+      "cards": {
+        "title": "Cartas de reino que recomienda la guía",
+        "items": [
+          "**Economía de cartas:** Grupo de Aventureros (todas tus cartas Rastreador), Indultos Reales Falsificados (descarte a la mano en primavera) y Benefactor Misterioso (te salta un Desgaste).",
+          "**Ver lo oculto:** Paso del Contrabandista (retirada y viaje gratis), El Posadero (miras cartas boca abajo en primavera) y Reloj de Sol Agrietado (anula los pasos de Día y Noche de una región).",
+          "**Influencia y Saber extra:** Cabañas Remotas, Constructores de Monumentos, Gremio de Mercaderes y Atalayas Blancas."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Introductory Strategy Guide (Eerie Idol Games)",
+          "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf"
+        },
+        {
+          "title": "Teaching Guide (Eerie Idol Games)"
+        }
+      ]
+    },
+    {
+      "id": "otras",
+      "title": "Otras facciones",
+      "kind": "Primeras pistas",
+      "thesis": "La guía oficial solo da una pista de cada facción: su estilo, la táctica que mejor la representa y dos cartas clave de su sede.",
+      "style": "Todas tienen además un Campeón en su sede: fuerza fiable y buena carta para todo.",
+      "keys": [
+        {
+          "title": "Clanes",
+          "when": "Movilidad y fuerza bruta",
+          "text": "Táctica clave: **Dureza de la Sal** (Salt Toughness), para recuperar en la mano sus cartas más fuertes y mantener la presión ronda a ronda. En su sede: **Saquear y Arrasar** (Raid & Raze), caballería con un giro letal, y **Puerto de Nuevos Refugios** (New Havens Harbour), que recupera simpatizantes y los hace más resistentes."
+        },
+        {
+          "title": "Alzamiento",
+          "when": "Engaños y eliminar cartas",
+          "text": "Táctica clave: **Escuela de las Calles** (School of the Streets), que le da recursos al eliminar cartas rivales. En su sede: **Treta de Pólvora Negra** (Black Powder Ploy), un Agente aún más letal, y **Cala del Contrabando** (Moonshine Cove), para conseguir más cartas de reino y más a menudo."
+        },
+        {
+          "title": "Congregación",
+          "when": "Manipular cartas y el tablero",
+          "text": "Táctica clave: **Más allá de las Luces** (Out Beyond the Lights), para dar la vuelta a un choque a su favor. En su sede: **Ritual del Ojo** (Ritual of the Eye), que altera las reglas del choque y frena a los Campeones, y **La Puerta en la Noche** (The Door in the Night), para espiar el mapa antes de emboscar."
+        }
+      ],
+      "pending": "Es solo lo que dicen las guías oficiales. Cuando tengamos guías o fotos de sus tableros y sedes, cada facción tendrá su plan como la Nobleza.",
+      "sources": [
+        {
+          "title": "Introductory Strategy Guide (Eerie Idol Games)",
+          "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf"
+        },
+        {
+          "title": "Teaching Guide (Eerie Idol Games)"
         }
       ]
     }
