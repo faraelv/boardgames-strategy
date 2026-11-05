@@ -78,6 +78,11 @@
           "text": "Nadie puede emboscar ni flanquear en el primer choque de esa región. Necesitas una máquina de guerra activa en primavera: la de tu mazo básico (fuerza 5) o, mejor, el **Muro Dorado**, que se queda desplegado ronda tras ronda. El Taller de Ingenieros también deja desplegar en primavera."
         },
         {
+          "title": "Contra flanqueos",
+          "when": "Si no tienes Ley Marcial",
+          "text": "Pon la **Treta** en la región que defiendes y guarda el **Agente** en la mano. Si un rival flanquea hacia allí, en el Día de ese choque usa la **Emboscada** de la Treta para meter el Agente bocabajo: por la noche su **Letal** elimina las cartas rivales sin protección. Si hay un **Seguidor** rival, no metas el Agente (moriría): mete una carta fuerte. Con el Gremio de Asesinos, el Heredero también sirve."
+        },
+        {
           "title": "Juicio de Brujas",
           "when": "Otoño · 1 uso",
           "text": "Pieza central del Precio Dorado. Elige el Consejo con más cartas rivales. Mover tus propias cartas al mazo es opcional: da Saber y retrasa el Desgaste."
@@ -253,7 +258,6 @@
       "warnings": [
         "Viajar manda la carta a la Pila Perdida para siempre, salvo que tenga el rasgo **Rastreador**: esa vuelve al descarte y puede viajar más veces.",
         "Las cartas metidas con la Reina o al gobernar necesitan votos. Solo las habilidades que dicen «mueve a un Consejo» (sin gobernar) admiten cartas sin votos.",
-        "Contra flanqueos, guarda en la mano una Treta, un Heredero y un Agente para poder meter Letal en el choque.",
         "Ir último en el orden de turno te deja colocar los marcadores de choque y decidir en qué orden se resuelven las regiones.",
         "Si vas empatado al final, gana el Campo de Cosecha en las últimas rondas: el Favor del Reino deshace el empate.",
         "No termines con tácticas sin usar: es ventaja perdida.",
