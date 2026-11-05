@@ -2,7 +2,7 @@
 
 
 **App (móvil):** https://faraelv.github.io/boardgames-strategy/ · Repositorio: `faraelv/boardgames-strategy`
-**Copia para PC:** página de Claude https://claude.ai/artifact/NxKmkC9WUrKXyML45nRjeW (privada; el contenido es el mismo que el de la app)
+**Copia para PC:** página de Claude https://claude.ai/artifact/GPWajgPg3QXnveA4BTEAms (privada; el contenido es el mismo que el de la app)
 
 PWA hermana de Ronda Cero: solo las mejores estrategias para ganar en cada juego. Ronda Cero se queda con la preparación, el turno y los puntos; aquí no se repite nada de eso.
 
