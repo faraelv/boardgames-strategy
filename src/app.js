@@ -113,7 +113,7 @@ function renderGame(g, plan) {
             el('h3', {}, [c.name, c.original ? el('small', {}, c.original) : null]),
             ...c.text.map(t => R('p', t))
           ]),
-          c.why ? R('p', c.why, { class: 'why' }) : null
+          c.why ? el('div', { class: 'why' }, [c.tag ? el('span', { class: 'tag' }, c.tag) : null, R('p', c.why)]) : null
         ])))
       : el('ul', { class: 'plain' }, plan.cards.items.map(t => R('li', t))),
     ...(plan.cards.after || []).map(t => R('p', t, { class: 'note muted' }))

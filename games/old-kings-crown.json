@@ -95,10 +95,48 @@
             "name": "Gremio de Asesinos",
             "original": "Assassins' Guild",
             "text": [
-              "Tus Herederos ganan **Letal** y **Retirada** (Día). Cuando tu Heredero elimina una o más cartas, ganas **1 de Influencia**.",
+              "Tus Herederos ganan **Letal** (Noche) y **Retirada** (Día). Cuando tu Heredero elimina una o más cartas, ganas **1 de Influencia**.",
               "**Noche:** si hay algún simpatizante rival activo en un choque con tu Heredero, elimina a tu Heredero."
             ],
-            "why": "La pega se anula con la **Guardia Real**: tus Herederos invulnerables no pueden ser eliminados. Con la Reina tienes dos Herederos letales."
+            "why": "La pega se anula con la **Guardia Real**: tus Herederos invulnerables no pueden ser eliminados. Con la Reina tienes dos Herederos letales.",
+            "tag": "Imprescindible"
+          },
+          {
+            "name": "Anillo Curioso",
+            "original": "Curious Ring",
+            "tag": "Imprescindible",
+            "text": [
+              "**Otoño:** reactiva una de tus tácticas agotadas (sigue sus instrucciones de preparación). Descarta esta carta y la carta que la ocupa."
+            ],
+            "why": "Te da un **segundo Juicio de Brujas**, es decir, un segundo Precio Dorado, o una segunda **Escuela de las Piedras**. Según las aclaraciones oficiales, puedes reactivar una táctica que hayas usado esa misma ronda."
+          },
+          {
+            "name": "Guardia Espléndida",
+            "original": "Splendid Guard",
+            "tag": "Imprescindible",
+            "text": [
+              "Puedes activar el Favor del Reino de tu facción **aunque no lo tengas**. Si lo tienes, puedes activarlo **dos veces** (cada vez es una acción distinta)."
+            ],
+            "why": "La Nobleza tiene el mejor Favor del juego: **Guardia Real** siempre disponible, o dos veces por ronda (Influencia y Herederos invulnerables a la vez)."
+          },
+          {
+            "name": "Constructores de Monumentos",
+            "original": "Monument Builders",
+            "tag": "Muy buena",
+            "text": [
+              "**Primavera:** ganas 1 de Influencia si tienes alguna carta en un Consejo. Si tienes una carta en **cada** Consejo, puedes descartar esta carta para ganar 2 de Influencia más."
+            ],
+            "why": "La Reina pone una carta en cada Consejo: justo lo que pide para el bonus de 2."
+          },
+          {
+            "name": "Sello del Viejo Rey",
+            "original": "Old King's Signet",
+            "tag": "Muy buena",
+            "text": [
+              "Al conseguirla, tu tamaño de mano sube en uno (y baja si dejas de ocuparla).",
+              "Cada vez que ganas un choque en una región donde tienes un **Heredero** activo, ganas 1 de Influencia."
+            ],
+            "why": "Encaja con la fortaleza de las rondas 4-5, donde tendrás dos Herederos activos. La mano extra compensa el Desgaste."
           },
           {
             "image": "cards/oldKingsSpear.webp",
@@ -107,7 +145,17 @@
             "text": [
               "**Día:** elige una de tus cartas activas en el choque actual. Gana **Letal** hasta el final del choque. Descarta esta carta y la carta que la ocupa."
             ],
-            "why": "Es de **un solo uso**. Guárdala para el choque decisivo, por ejemplo para romper a quien intente flanquear tu fortaleza."
+            "why": "Es de **un solo uso**. Guárdala para el choque decisivo, por ejemplo para romper a quien intente flanquear tu fortaleza.",
+            "tag": "Útil"
+          },
+          {
+            "name": "Escudo del Viejo Rey",
+            "original": "Old King's Shield",
+            "tag": "Útil",
+            "text": [
+              "**Día:** elige una de tus cartas activas en el choque actual. Gana **Invulnerable** hasta el final del choque. Descarta esta carta."
+            ],
+            "why": "Protección de un solo uso contra Letal sin gastar un uso de la Guardia Real."
           },
           {
             "image": "cards/tinCrowns.webp",
@@ -116,7 +164,35 @@
             "text": [
               "Si vas **primero** en el orden de turno, tus simpatizantes ganan **+1 voto**. Si **no** vas primero, ganan **+2 votos**."
             ],
-            "why": "Más votos sin gastar cartas. Rinde más si no vas primero, que es lo habitual cuando juegas a no ser agresivo en las primeras rondas."
+            "why": "Más votos sin gastar cartas. Rinde más si no vas primero, que es lo habitual cuando juegas a no ser agresivo en las primeras rondas.",
+            "tag": "Útil"
+          },
+          {
+            "name": "Estandarte de Reclutamiento",
+            "original": "Mustering Banner",
+            "tag": "Útil",
+            "text": [
+              "**Otoño:** devuelve hasta 2 de tus simpatizantes del mapa o de la Pila Perdida a tu tablero."
+            ],
+            "why": "Te asegura los 5 simpatizantes para la Escuela de las Piedras sin depender del Consejo de Juramentos."
+          },
+          {
+            "name": "Grupo de Aventureros",
+            "original": "Adventuring Party",
+            "tag": "Útil",
+            "text": [
+              "Todas tus cartas ganan **Rastreador**. Además, tus cartas activas cuentan como si estuvieran en tu mano para viajar."
+            ],
+            "why": "Viajas sin perder cartas: llegas a los 4 de Saber de la Reina sin vaciar el mazo."
+          },
+          {
+            "name": "Cuevas Relucientes",
+            "original": "Glittering Caves",
+            "tag": "Útil",
+            "text": [
+              "Cada vez que viajas con una carta con **Rastreador**, ganas 1 de Influencia y 1 de Saber más."
+            ],
+            "why": "La Reina es Rastreador: cada viaje con ella te da 2 de Saber y 1 de Influencia sin perderla."
           },
           {
             "image": "cards/engineersWorkshop.webp",
@@ -126,11 +202,31 @@
               "Tus cartas con **Despliegue (1)** de otoño ganan también **Despliegue (1)** de primavera.",
               "**Otoño:** pon **1 de Influencia** en una de tus cartas activas con Despliegue."
             ],
-            "why": "La Influencia extra mantiene tu máquina de guerra un invierno más en el mapa, que es lo que necesita la **Ley Marcial**. El Despliegue de primavera te da otra forma de tenerla activa."
+            "why": "La Influencia extra mantiene tu máquina de guerra un invierno más en el mapa, que es lo que necesita la **Ley Marcial**. El Despliegue de primavera te da otra forma de tenerla activa.",
+            "tag": "Para la Ley Marcial"
+          },
+          {
+            "name": "Comandante de Asedio",
+            "original": "Siege Commander",
+            "tag": "Para la Ley Marcial",
+            "text": [
+              "Tus Herederos ganan **Despliegue (1)** de otoño. Si tu Heredero es eliminado, vuelve a tu mano y se descarta esta carta."
+            ],
+            "why": "Con Despliegue, tu Heredero se queda activo en la región de la fortaleza de una ronda a otra. Con el Taller de Ingenieros también se despliega en primavera."
+          },
+          {
+            "name": "Reservistas del Campo",
+            "original": "Countryside Reservists",
+            "tag": "Para la Ley Marcial",
+            "text": [
+              "Tus Seguidores y tu Caballería ganan **Despliegue (1)** de otoño.",
+              "**Otoño:** mueve un Seguidor de tu descarte a tu mano."
+            ],
+            "why": "Más cartas que se quedan desplegadas en tu región. Es la otra carta de «despliegue» que mencionaba la guía."
           }
         ],
         "after": [
-          "Hay otras dos cartas de reino que, según la guía, sirven para **volver a desplegar máquinas de guerra**. No sabemos aún su nombre."
+          "Ordenadas de más a menos importante. Las que no tienen imagen aún no las hemos fotografiado."
         ]
       },
       "warnings": [
