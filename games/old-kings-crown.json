@@ -25,7 +25,7 @@
           "goal": "Prepararse",
           "do": [
             "Gobierna una carta **cada otoño**, sobre todo en **Secretos**.",
-            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes: viaja con el Mercader y gana el Páramo.",
+            "Llega al otoño de la ronda 2 con **4 de Saber exactos** y no los gastes antes. Viaja en cada otoño con la carta que más Saber dé (la guía usa la de arquetipo **Comerciante**) y, si puedes, gana el **Páramo**: te deja viajar otra vez, incluso con la carta activa del choque.",
             "Juega el Agente de forma agresiva, aunque muera, si de paso elimina cartas importantes del rival."
           ]
         },
@@ -89,16 +89,25 @@
         ]
       },
       "warnings": [
+        "Viajar manda la carta a la Pila Perdida para siempre, salvo que tenga el rasgo **Rastreador**: esa vuelve al descarte y puede viajar más veces.",
         "Contra flanqueos, guarda en la mano una Treta, un Heredero y un Agente para poder meter Letal en el choque.",
         "Ir último en el orden de turno te deja colocar los marcadores de choque y decidir en qué orden se resuelven las regiones.",
         "Si vas empatado al final, gana el Campo de Cosecha en las últimas rondas: el Favor del Reino deshace el empate.",
         "No termines con tácticas sin usar: es ventaja perdida."
       ],
-      "pending": "La Reina, su efecto y los nombres de las cartas de El Manto salen de un resumen automático del vídeo. Compruébalos con las cartas reales.",
+      "pending": "La Reina, su efecto y los nombres de las cartas de El Manto salen de un resumen automático del vídeo. Falta comprobar también qué carta básica es la de arquetipo Comerciante y cuánto Saber da.",
       "sources": [
-        { "title": "Guía de la Nobleza de Jaffles (playtester), vídeo", "url": "https://youtu.be/ZlNs_WyF8Y0" },
-        { "title": "Introductory Strategy Guide (Eerie Idol Games)", "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf" },
-        { "title": "Reglamento de La corona del viejo rey (inglés)" }
+        {
+          "title": "Guía de la Nobleza de Jaffles (playtester), vídeo",
+          "url": "https://youtu.be/ZlNs_WyF8Y0"
+        },
+        {
+          "title": "Introductory Strategy Guide (Eerie Idol Games)",
+          "url": "https://sde0b16cbef51efc3.jimcontent.com/download/version/1773302248/module/15004257027/name/The%20Old%20King's%20Crown%20-%20Introductory%20Strategy%20Guide.pdf"
+        },
+        {
+          "title": "Reglamento de La corona del viejo rey (inglés)"
+        }
       ]
     }
   ]
