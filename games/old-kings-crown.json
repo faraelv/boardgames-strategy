@@ -40,7 +40,7 @@
             "Haz tu acción normal de gobernar desde la mano. Con las de las rondas 1-2, tendrás unas 5-7 cartas en los Consejos.",
             "Activa los Consejos: **Secretos** pone tantos marcadores como votos tengas allí y con 4 en una localización cobras su recompensa; **Juramentos** te devuelve simpatizantes para la fortaleza final.",
             "Activa el **Juicio de Brujas**: echas a los rivales de un Consejo y devuelves tus cartas de los Consejos al mazo, +1 de Saber por cada una.",
-            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): **Banco Real** (3) primero, y después **Virrey** (2) o **Muro Dorado** (2). Con 7 de Saber te llevas los tres."
+            "Gasta ese Saber al momento (solo se puede gastar al ganarlo): **Banco Real** (3) primero. Después, según lo que necesites: **Alto Tribunal** (3) para dominar los Consejos, **Muro Dorado** (2) para la fortaleza o **Virrey** (2) para robar cartas de reino."
           ],
           "ordered": true,
           "check": false
@@ -251,7 +251,7 @@
         "Vigila el **Agente** de cada rival (descarte, Pila Perdida y Consejos). Mientras no sepas dónde está, no metas cartas frágiles sin protección.",
         "Cuidado con el Desgaste: el Santuario y la Necrópolis (Tierras Bajas) te devuelven cartas al mazo o a la mano. Las cartas avanzadas que compras van a la mano y también ayudan."
       ],
-      "pending": "Falta la quinta carta de El Manto. Y dos cifras del vídeo sin comprobar: que los choques dan 1-3 de Influencia al principio y hasta 8 al final, y los «unos 28 de fuerza» de la fortaleza.",
+      "pending": "Solo quedan dos cifras del vídeo sin comprobar: que los choques dan 1-3 de Influencia al principio y hasta 8 al final, y los «unos 28 de fuerza» de la fortaleza.",
       "sources": [
         {
           "title": "Guía de la Nobleza de Jaffles (playtester), vídeo",
@@ -294,6 +294,17 @@
             "why": "Ingresos fijos cada ronda sin ganar choques. Además, las cartas que no tenían votos pasan a servir para gobernar, y para que la Reina las recupere."
           },
           {
+            "image": "cards/highCourt.webp",
+            "name": "El Alto Tribunal",
+            "original": "The High Court",
+            "tag": "3 de Saber · Para los Consejos",
+            "text": [
+              "Fuerza 5 · Comerciante · **Invulnerable** · 2 votos.",
+              "**Otoño:** si esta carta está en un Consejo, muévela a otro Consejo."
+            ],
+            "why": "Sus 2 votos trabajan dos veces cada otoño: activa **Secretos**, mueve el Tribunal a **Juramentos** y actívalo también. Gobierna con él en cuanto lo compres."
+          },
+          {
             "image": "cards/viceroy.webp",
             "name": "El Virrey",
             "original": "The Viceroy",
@@ -315,9 +326,6 @@
             ],
             "why": "Se queda desplegado indefinidamente mientras tengas 2 simpatizantes en su región: el ancla perfecta para la **Ley Marcial** y la fortaleza final."
           }
-        ],
-        "after": [
-          "Falta la quinta carta de El Manto."
         ]
       }
     },
